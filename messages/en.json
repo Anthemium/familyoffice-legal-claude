@@ -1,0 +1,595 @@
+{
+  "meta": {
+    "title": "FAMILY OFFICE LEGAL · A family office led by advocates",
+    "description": "A family office protected by attorney–client privilege. Markov Group Bar Association: Russia, Hungary, the EU."
+  },
+  "nav": {
+    "by": "by Markov Group",
+    "principle": "Principle",
+    "architecture": "Architecture",
+    "practice": "Practice",
+    "models": "Models",
+    "jurisdictions": "Jurisdictions",
+    "platform": "Platform",
+    "canon": "Design canon",
+    "login": "Sign in",
+    "family": "Family office",
+    "studiolo": "Counsel's Studiolo",
+    "back": "Back to site"
+  },
+  "hero": {
+    "eyebrow": "Markov Group Bar Association · 30 years of practice",
+    "title1": "Family capital",
+    "title2": "protected by",
+    "title3": "attorney–client privilege",
+    "lead": "A family office run by an advocate, not a bank. Everything you entrust to us — ownership structure, transactions, disputes, succession — is protected by professional secrecy law in Russia, Hungary and the EU.",
+    "cta": "Request a private meeting",
+    "cta2": "Explore the platform",
+    "basis": "Art. 8, Federal Law 63-FZ on Advocacy · Üttv. § 9 (Hungary) · Legal Professional Privilege",
+    "caption": "G. B. Piranesi · The Pantheon · Vedute di Roma, c. 1761 · Rijksmuseum · Public Domain"
+  },
+  "why": {
+    "eyebrow": "I · Principle",
+    "title": "Why a family office should be led by an advocate",
+    "lead": "A banker, an asset manager or an accountant can be compelled to disclose your correspondence to a court or regulator. An advocate cannot. It is the only profession for which client secrecy is not a privacy policy but a rule of law.",
+    "bank": {
+      "name": "Bank / wealth manager",
+      "points": [
+        "0.6–1% of assets a year — including illiquid business",
+        "Product-driven: sells its own products",
+        "Correspondence is open to courts and regulators"
+      ],
+      "verdict": "Sees the portfolio, not the family"
+    },
+    "sfo": {
+      "name": "Own single-family office",
+      "points": [
+        "$6.6M+ a year in staff costs above $1B in assets",
+        "In-house General Counsel: $274–496k a year",
+        "In-house privilege is easily diluted"
+      ],
+      "verdict": "Justified from $500M–$1B"
+    },
+    "ours": {
+      "name": "Advocate-led family office",
+      "points": [
+        "Fixed retainer instead of a percentage of assets",
+        "The advocate quarterbacks every adviser of the family",
+        "Secrecy protected by statute, not by contract"
+      ],
+      "verdict": "Optimal for $30–500M"
+    },
+    "source": "Sources: J.P. Morgan Global Family Office Report 2026; compensation surveys 2025–2026."
+  },
+  "tiers": {
+    "eyebrow": "II · Architecture",
+    "title": "Three tiers of capital. One perimeter of privilege.",
+    "lead": "This is how leading international practices structure family offices: the advocate stands between the family and its assets and controls both flows — instructions down and reporting up.",
+    "upper": "Tier I · Family and ownership",
+    "upperItems": [
+      "Family council",
+      "Private foundations and trusts",
+      "Private trust companies"
+    ],
+    "core": "Core · Advocate-led family office",
+    "coreItems": [
+      "Outside counsel",
+      "Dedicated consultancy",
+      "Fiduciary roles",
+      "Family General Counsel"
+    ],
+    "lower": "Tier III · Assets and transactions",
+    "lowerItems": [
+      "Operating business",
+      "Real estate",
+      "Private equity",
+      "Art, yachts, aviation"
+    ],
+    "ring": "Perimeter of privilege and fiduciary control",
+    "control": "Instructions",
+    "report": "Reporting",
+    "caption": "Ambrogio Lorenzetti · Allegory of Good Government, 1338–39 · Palazzo Pubblico, Siena · Public Domain"
+  },
+  "practice": {
+    "eyebrow": "III · Practice",
+    "title": "Eight lines of protection",
+    "lead": "The disciplines Markov Group has practised for three decades, gathered into a single family mandate.",
+    "items": [
+      {
+        "t": "Criminal risk",
+        "d": "Preventive strategy, advocate-led internal investigations, defence in economic and official-misconduct cases."
+      },
+      {
+        "t": "Victim representation",
+        "d": "Securing victim status early, motions, challenging investigative inaction."
+      },
+      {
+        "t": "Leaks and privacy",
+        "d": "Leak-channel audits, staff NDAs, OSINT monitoring, content removal."
+      },
+      {
+        "t": "Government relations",
+        "d": "Representation before tax, financial and law-enforcement authorities; cross-border requests."
+      },
+      {
+        "t": "Tax planning",
+        "d": "Long-term strategy, CFC rules, multi-jurisdictional structuring, quarterly compliance reviews."
+      },
+      {
+        "t": "Structuring and asset protection",
+        "d": "Holdings, private foundations and trusts, due diligence, recovery of seized assets."
+      },
+      {
+        "t": "Investment support",
+        "d": "Deal structuring, counterparty diligence, investment disputes, regulator appeals."
+      },
+      {
+        "t": "Counter-surveillance",
+        "d": "Uncovering unlawful data collection, family security protocols, court representation."
+      }
+    ]
+  },
+  "models": {
+    "eyebrow": "IV · Model",
+    "title": "Which family office model fits your capital",
+    "lead": "International practice has settled on four models. Move the sliders — we will show the one we would choose ourselves, and what it costs compared with a bank or your own staff.",
+    "capital": "Family capital",
+    "complexity": "Structural complexity",
+    "complexityLevels": [
+      "One jurisdiction, liquid assets",
+      "Business, real estate, 2–3 countries",
+      "Trusts, foundations, deals, 4+ countries"
+    ],
+    "recommended": "Recommended model",
+    "m1": {
+      "name": "Virtual family office",
+      "who": "An advocate quarterbacks every adviser of the family",
+      "privilege": "Maximum privilege protection"
+    },
+    "m2": {
+      "name": "Dedicated consultancy",
+      "who": "A separate entity takes management and fiduciary roles; the bar firm keeps the legal ones",
+      "privilege": "Privilege via the bar firm"
+    },
+    "m3": {
+      "name": "Fiduciary hybrid",
+      "who": "A trust wing: protectors, directors, foundation guardians",
+      "privilege": "Privilege + fiduciary confidentiality"
+    },
+    "m4": {
+      "name": "In-house General Counsel",
+      "who": "Own office with an advocate as GC; the bar firm as the outer perimeter",
+      "privilege": "Requires strict correspondence hygiene"
+    },
+    "cost": "Estimated annual cost",
+    "bank": "Bank, 0.8% of assets",
+    "sfo": "Own staff",
+    "ours": "Advocate-led office, retainer",
+    "perYear": "a year",
+    "note": "Illustration based on market benchmarks from the research. Not an offer; fees are set by the legal services agreement."
+  },
+  "juris": {
+    "eyebrow": "V · Jurisdictions",
+    "title": "Jurisdictions and the thresholds we monitor",
+    "lead": "The regulatory landscape shifts every quarter. The platform tracks disclosure, licensing and tax-regime thresholds — and warns the family in advance.",
+    "items": [
+      {
+        "code": "RU",
+        "name": "Russia",
+        "regime": "Private foundation (Civil Code 123.20-4), CFC rules, Law 115-FZ",
+        "figure": "Art. 8",
+        "figureLabel": "63-FZ: advocate secrecy"
+      },
+      {
+        "code": "HU",
+        "name": "Hungary",
+        "regime": "Bizalmi vagyonkezelés (Ptk. 6:310. §), vagyonkezelő alapítvány",
+        "figure": "§ 9",
+        "figureLabel": "Üttv.: ügyvédi titoktartás"
+      },
+      {
+        "code": "EU",
+        "name": "European Union",
+        "regime": "6AMLD / AMLR: UBO registers on legitimate interest",
+        "figure": "25%",
+        "figureLabel": "UBO threshold, down to 15% for high risk"
+      },
+      {
+        "code": "CH",
+        "name": "Switzerland",
+        "regime": "FinIA / FinIO: family-ties exemption",
+        "figure": "CHF 5M",
+        "figureLabel": "third-party assets threshold"
+      },
+      {
+        "code": "AE",
+        "name": "UAE",
+        "regime": "DIFC / ADGM: common law, family offices",
+        "figure": "800+",
+        "figureLabel": "family offices in DIFC"
+      },
+      {
+        "code": "SG",
+        "name": "Singapore",
+        "regime": "MAS 2026, tax regimes 13O / 13U",
+        "figure": "S$20 / 50M",
+        "figureLabel": "minimum AUM 13O / 13U"
+      }
+    ],
+    "caption": "Canaletto · The Bacino di San Marco, c. 1738 · Public Domain"
+  },
+  "privilege": {
+    "eyebrow": "VI · Privilege hygiene",
+    "title": "Two ambassadors — two letters",
+    "lead": "The main weakness of any family office is mixed correspondence. When legal advice sits next to investment advice in one email, a court may strip protection from the whole document. The platform separates these flows by design.",
+    "rules": [
+      {
+        "t": "Two perimeters",
+        "d": "The privileged legal perimeter and the operational one for bankers, managers and staff are physically separated."
+      },
+      {
+        "t": "Primary purpose check",
+        "d": "Before sending, the platform flags a commercial question inside a legal message and offers to split it in two."
+      },
+      {
+        "t": "Mark only what is legal",
+        "d": "The privilege legend goes on legal documents only — indiscriminate marking devalues protection."
+      },
+      {
+        "t": "No forwarding to third parties",
+        "d": "Privileged documents cannot be forwarded to an outside manager — the most common way privilege is waived by accident."
+      }
+    ],
+    "caption": "Hans Holbein the Younger · The Ambassadors, 1533 · National Gallery, London · Public Domain"
+  },
+  "platform": {
+    "eyebrow": "VII · Platform",
+    "title": "Two cabinets. Different levels of access.",
+    "family": {
+      "t": "Family office",
+      "d": "Family balance sheet, structure map, regulatory calendar, family council and privileged messaging with counsel. On a phone it feels like your bank.",
+      "cta": "Open demo"
+    },
+    "studiolo": {
+      "t": "Counsel's Studiolo",
+      "d": "The team's closed cabinet: family matters, contract templates in three languages, Russian, Hungarian and EU law, access matrix and audit log.",
+      "cta": "Enter demo"
+    },
+    "studioloNote": "A studiolo was a Renaissance ruler's private study, which no one entered but its owner."
+  },
+  "contact": {
+    "title": "The first meeting is always in person",
+    "lead": "We do not take clients through a form. Leave a way to reach you — a partner will be in touch within one business day.",
+    "phone": "+7 925 772-25-82",
+    "email": "amarkov@markovgroup.legal",
+    "address": "29 Vereyskaya St., bldg. 134, Vereyskaya Plaza III, Moscow",
+    "cta": "Contact a partner"
+  },
+  "footer": {
+    "rights": "Markov Group Bar Association. This site is not a public offer.",
+    "art": "All artworks are in the public domain (Wikimedia Commons, Rijksmuseum)."
+  },
+  "family": {
+    "title": "Family office",
+    "greeting": "Good evening, Valden family",
+    "demo": "Demo data",
+    "stories": [
+      "Weekly brief",
+      "AMLR: what changes",
+      "Family council",
+      "NextGen",
+      "Calendar"
+    ],
+    "tabs": [
+      "Overview",
+      "Structure",
+      "Documents",
+      "Family council",
+      "Messages"
+    ],
+    "balance": "Family balance sheet",
+    "balanceNote": "Consolidated across 14 entities · updated today",
+    "classes": [
+      "Operating business",
+      "Commercial real estate",
+      "Private equity",
+      "Liquid portfolio",
+      "Art and special assets"
+    ],
+    "kpi": {
+      "entities": "Entities and structures",
+      "entitiesSub": "across 5 jurisdictions",
+      "vault": "Privileged documents",
+      "vaultSub": "attorney–client perimeter",
+      "shield": "Protection index",
+      "shieldSub": "+4 this quarter",
+      "matters": "Open instructions",
+      "mattersSub": "2 await your decision"
+    },
+    "calendar": "Regulatory calendar",
+    "calendarItems": [
+      {
+        "date": "10.11",
+        "t": "EU UBO registers: 12 working days to respond",
+        "tag": "EU"
+      },
+      {
+        "date": "20.11",
+        "t": "CFC notification for last year — reconciliation",
+        "tag": "RU"
+      },
+      {
+        "date": "02.12",
+        "t": "Annual report of the bizalmi vagyonkezelő",
+        "tag": "HU"
+      },
+      {
+        "date": "15.01",
+        "t": "Family charter review",
+        "tag": "Family"
+      }
+    ],
+    "structure": "Structure map",
+    "structureNote": "Tap a node to see its jurisdiction and responsible advocate",
+    "council": "Family council",
+    "councilNext": "Next session — 14 November, Budapest",
+    "councilAgenda": [
+      "Dividend policy 2027",
+      "Second generation joining the board",
+      "Charitable foundation: charter"
+    ],
+    "charter": "Family charter",
+    "charterProgress": "7 of 9 sections agreed",
+    "matters": "Instructions to counsel",
+    "mattersItems": [
+      {
+        "t": "Restructuring of the Hungarian holding",
+        "who": "A. Markov",
+        "p": 72
+      },
+      {
+        "t": "Cross-border prenuptial agreement",
+        "who": "E. Sokolova",
+        "p": 40
+      },
+      {
+        "t": "Due diligence: real estate deal, Vienna",
+        "who": "D. Kovács",
+        "p": 88
+      }
+    ],
+    "shieldTitle": "Family Shield · 24/7",
+    "shieldText": "A search, a detention, a dawn raid — press, and the duty advocate calls back within 15 minutes. Step-by-step instructions open immediately.",
+    "shieldCta": "Call an advocate",
+    "shieldSteps": [
+      "Give no explanations without your advocate",
+      "Ask to see the warrant and identification",
+      "State that the documents contain privileged material",
+      "Do not sign the record without your objections"
+    ],
+    "shieldSent": "Signal sent. Duty advocate: A. Markov. Expected response — within 15 minutes.",
+    "compose": {
+      "title": "Message to counsel",
+      "contourA": "Perimeter A · Privileged",
+      "contourB": "Perimeter B · Operational",
+      "placeholder": "For example: please assess the risks of the loan agreement with our Hungarian holding…",
+      "ok": "The purpose of this message is legal advice. The privilege legend will be applied.",
+      "warn": "This message seems to contain a commercial question. A court may treat business advice as its primary purpose and strip protection from the whole message.",
+      "split": "Split into two messages",
+      "send": "Send as privileged",
+      "sendB": "Send to operational perimeter",
+      "sent": "Sent. The document is logged and marked privileged.",
+      "hint": "Trigger words: return, yield, buy, sell, portfolio, invest, rate, доходность"
+    },
+    "nav": [
+      "Home",
+      "Structure",
+      "Documents",
+      "Family",
+      "More"
+    ]
+  },
+  "studiolo": {
+    "gateTitle": "Studiolo",
+    "gateLead": "The closed cabinet of the firm's advocates. Every action is signed and written to an immutable log.",
+    "gateKey": "Confirm with hardware key",
+    "gateChecks": [
+      "Registered device",
+      "Firm network / VPN",
+      "Password and passkey"
+    ],
+    "gateSession": "Session: 15 minutes idle · watermark · copy protection",
+    "unlocking": "Verifying key…",
+    "title": "Studiolo",
+    "user": "A. Markov · managing partner",
+    "lock": "Close cabinet",
+    "menu": [
+      "Matters",
+      "Templates",
+      "Legislation",
+      "Access",
+      "Log"
+    ],
+    "matters": "Family matters",
+    "mattersCols": [
+      "Matter",
+      "Family",
+      "Jurisdictions",
+      "Perimeter",
+      "Due"
+    ],
+    "mattersItems": [
+      {
+        "t": "Holding restructuring",
+        "f": "Valden",
+        "j": "HU · CY",
+        "c": "A",
+        "d": "28.11"
+      },
+      {
+        "t": "Private foundation: charter and terms",
+        "f": "Valden",
+        "j": "RU",
+        "c": "A",
+        "d": "05.12"
+      },
+      {
+        "t": "Defence in a tax audit",
+        "f": "R.",
+        "j": "RU",
+        "c": "A",
+        "d": "urgent"
+      },
+      {
+        "t": "Custodian coordination",
+        "f": "Valden",
+        "j": "CH · AE",
+        "c": "B",
+        "d": "12.12"
+      },
+      {
+        "t": "Heirs' trust dispute",
+        "f": "K.",
+        "j": "HU · AT",
+        "c": "A",
+        "d": "20.01"
+      }
+    ],
+    "templates": "Template library",
+    "templatesNote": "Each template exists in three reconciled language versions. Stored encrypted in S3 and issued via a 5-minute link.",
+    "templatesItems": [
+      {
+        "t": "Family office agreement (retainer)",
+        "k": "Agreement",
+        "langs": [
+          "RU",
+          "EN",
+          "HU"
+        ]
+      },
+      {
+        "t": "Family charter / constitution",
+        "k": "Governance",
+        "langs": [
+          "RU",
+          "EN",
+          "HU"
+        ]
+      },
+      {
+        "t": "Private foundation charter",
+        "k": "RU · Civil Code 123.20-4",
+        "langs": [
+          "RU",
+          "EN"
+        ]
+      },
+      {
+        "t": "Bizalmi vagyonkezelési szerződés",
+        "k": "HU · Ptk. 6:310",
+        "langs": [
+          "HU",
+          "EN",
+          "RU"
+        ]
+      },
+      {
+        "t": "Household staff NDA",
+        "k": "Privacy",
+        "langs": [
+          "RU",
+          "EN",
+          "HU"
+        ]
+      },
+      {
+        "t": "Cross-border prenuptial agreement",
+        "k": "Family",
+        "langs": [
+          "RU",
+          "EN",
+          "HU"
+        ]
+      },
+      {
+        "t": "Search and seizure memo",
+        "k": "Shield",
+        "langs": [
+          "RU",
+          "EN"
+        ]
+      },
+      {
+        "t": "Power of attorney before the tax service",
+        "k": "Authorities",
+        "langs": [
+          "RU"
+        ]
+      }
+    ],
+    "law": "Legislation · parallel text",
+    "lawNote": "Demonstration excerpts. The working version syncs with official sources (pravo.gov.ru, njt.hu, EUR-Lex) and shows the consolidation date.",
+    "lawTabs": [
+      "Professional secrecy",
+      "Trusts and foundations",
+      "EU beneficial owners"
+    ],
+    "accessTitle": "Access matrix",
+    "accessRoles": [
+      "Partner",
+      "Advocate",
+      "Paralegal",
+      "Family principal",
+      "Family member",
+      "Outside manager"
+    ],
+    "accessCols": [
+      "Perimeter A",
+      "Perimeter B",
+      "Templates",
+      "Log"
+    ],
+    "audit": "Audit log",
+    "auditItems": [
+      {
+        "t": "14:02",
+        "a": "E. Sokolova opened “Prenuptial agreement v3”",
+        "h": "9f2c…a71e"
+      },
+      {
+        "t": "13:47",
+        "a": "S3 link issued (5 min) · Foundation charter",
+        "h": "41bd…0c9a"
+      },
+      {
+        "t": "13:15",
+        "a": "Forward to outside manager blocked · perimeter A",
+        "h": "c07e…5d12"
+      },
+      {
+        "t": "12:58",
+        "a": "Sign-in: A. Markov · YubiKey · Moscow",
+        "h": "e8a3…77f0"
+      }
+    ],
+    "watermark": "PRIVILEGED · A. MARKOV"
+  },
+  "canon": {
+    "title": "Design canon",
+    "lead": "The rules the platform is built on. Aristocracy lies in restraint: a museum engraving, a hairline rule, plenty of air and no gold for the sake of gold.",
+    "pigments": "The Pigmenta palette",
+    "pigmentsNote": "Colours are named after Renaissance workshop pigments. There are no green pigments — statuses are coded with ultramarine, ochre and madder.",
+    "type": "Typography",
+    "typeNote": "Cormorant Garamond for headings and quotations. Manrope for interface and figures. IBM Plex Mono for article numbers, hashes and references. All three support Cyrillic and Hungarian ő, ű.",
+    "art": "Working with art",
+    "artRules": [
+      "Only authentic works from open collections — no generation",
+      "Engraving treatment: warm monochrome, no gilding",
+      "The detail beats the whole: hands, instruments, architecture",
+      "Every image carries a museum label"
+    ],
+    "dash": "Dashboards",
+    "dashNote": "From banking apps we take the ergonomics: large figures, soft 24px cards, stories on top, bottom navigation on the phone. The difference: paper background, serif headings and a pigment palette.",
+    "artCaption": "Johannes Vermeer · The Geographer, 1669 · Städel Museum, Frankfurt · Public Domain"
+  }
+}

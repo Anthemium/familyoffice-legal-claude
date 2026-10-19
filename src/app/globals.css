@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/*
+  PIGMENTA — палитра FAMILY OFFICE LEGAL.
+  Каждый цвет назван по историческому пигменту мастерских Ренессанса.
+  Зелёных пигментов (terre verte, малахит, ярь-медянка) в палитре нет намеренно.
+*/
+@theme {
+  --color-carta: #f5f0e7;        /* свинцовые белила на бумаге — основной фон витрины */
+  --color-carta-2: #ece5d9;      /* второй план, подложки */
+  --color-vellum: #fbf9f5;       /* пергамент — карточки */
+  --color-ink: #1d1b20;          /* ламповая сажа — текст */
+  --color-ink-2: #4b4650;
+  --color-ink-3: #8a8390;
+  --color-hair: #d9d1c4;         /* волосяные линии 1px */
+
+  --color-lapis: #23396b;        /* ультрамарин из ляпис-лазури — основной акцент */
+  --color-lapis-2: #3b5592;
+  --color-lapis-soft: #e4e8f2;
+  --color-madder: #7a2433;       /* краплак — гриф адвокатской тайны, критичное */
+  --color-madder-soft: #f3e4e4;
+  --color-gold: #a88449;         /* сусальное золото — тонкие акценты */
+  --color-gold-soft: #f2eadb;
+  --color-umber: #6b5644;        /* сырая умбра — нейтральные статусы */
+  --color-umber-soft: #ece4dc;
+  --color-tyrian: #5c3b61;       /* тирский пурпур — семья, governance */
+  --color-tyrian-soft: #ede3ee;
+  --color-smalt: #6e7c9b;        /* смальта — вторичные данные */
+  --color-smalt-soft: #e8ebf1;
+
+  /* Студиоло: ночная палитра кабинета адвоката */
+  --color-noct: #121117;
+  --color-noct-2: #1a1921;
+  --color-noct-3: #24232d;
+  --color-noct-line: #34323f;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-manrope), "Manrope", system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-card: 24px;
+  --radius-tile: 18px;
+}
+
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body { background: var(--color-carta); color: var(--color-ink); font-family: var(--font-sans); }
+
+::selection { background: var(--color-lapis); color: var(--color-carta); }
+
+/* Капитель-подпись: «музейная этикетка» */
+.label-caps {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Гравюрная обработка живописи: убирает «нарочитость» и выводит цвет из палитры холста
+   (в т.ч. зелёную драпировку «Послов»), оставляя свет и тень. */
+.art-engraving { filter: grayscale(1) sepia(0.28) contrast(1.06) brightness(0.98); }
+.art-duotone-lapis { filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply; }
+.art-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-ink);
+}
+.art-frame::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(18,17,23,0.55) 100%);
+  pointer-events: none;
+}
+
+/* Тонкая рамка-паспарту, как у гравюры в каталоге */
+.passe-partout { padding: 10px; background: var(--color-vellum); box-shadow: 0 0 0 1px var(--color-hair); }
+
+/* Водяной знак Студиоло: имя, время, гриф — отпечатывается на каждом экране */
+.watermark {
+  position: fixed; inset: 0; pointer-events: none; z-index: 40;
+  background-image: var(--wm);
+  background-repeat: repeat;
+  opacity: 0.05;
+}
+
+.scroll-x { overflow-x: auto; scrollbar-width: none; }
+.scroll-x::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+}
+
+/* Cormorant по умолчанию рисует старостильные цифры («$1 50») — в суммах нужны выровненные. */
+.font-serif { font-variant-numeric: lining-nums proportional-nums; }

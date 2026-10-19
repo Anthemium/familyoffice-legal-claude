@@ -1,0 +1,151 @@
+// Черновая модель данных FAMILY OFFICE LEGAL (Timeweb Managed PostgreSQL).
+// Изоляция семей — Row-Level Security по family_id (политики в migrations/rls.sql),
+// разделение контуров тайны — полем perimeter на каждом документе и сообщении.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Perimeter {
+  A // адвокатская тайна: только адвокаты коллегии и принципалы семьи
+  B // операционный: управляющие, кастодианы, персонал
+}
+
+enum Role {
+  PARTNER
+  ADVOCATE
+  PARALEGAL
+  PRINCIPAL
+  FAMILY_MEMBER
+  OUTSIDE_MANAGER
+}
+
+enum Locale {
+  ru
+  en
+  hu
+}
+
+model Family {
+  id        String     @id @default(uuid()) @db.Uuid
+  codename  String     @unique // в интерфейсе адвоката — кодовое имя, не фамилия
+  createdAt DateTime   @default(now())
+  members   Member[]
+  entities  Entity[]
+  matters   Matter[]
+  documents Document[]
+}
+
+model User {
+  id          String       @id @default(uuid()) @db.Uuid
+  email       String       @unique
+  name        String
+  locale      Locale       @default(ru)
+  passkeys    Passkey[]
+  memberships Member[]
+  audit       AuditEvent[]
+}
+
+model Passkey {
+  id           String    @id // WebAuthn credential id
+  userId       String    @db.Uuid
+  user         User      @relation(fields: [userId], references: [id])
+  publicKey    Bytes
+  counter      Int
+  hardware     Boolean   @default(false) // YubiKey и т.п. — обязателен для Студиоло
+  lastUsedAt   DateTime?
+}
+
+model Member {
+  userId   String @db.Uuid
+  familyId String @db.Uuid
+  role     Role
+  user     User   @relation(fields: [userId], references: [id])
+  family   Family @relation(fields: [familyId], references: [id])
+
+  @@id([userId, familyId])
+}
+
+// Узел структуры владения: фонд, траст, холдинг, актив. tier: 1 — семья, 2 — ядро, 3 — активы.
+model Entity {
+  id           String   @id @default(uuid()) @db.Uuid
+  familyId     String   @db.Uuid
+  family       Family   @relation(fields: [familyId], references: [id])
+  name         String
+  kind         String
+  jurisdiction String   @db.Char(2)
+  tier         Int
+  parentId     String?  @db.Uuid
+  valueEur     Decimal? @db.Decimal(18, 2)
+}
+
+model Matter {
+  id        String    @id @default(uuid()) @db.Uuid
+  familyId  String    @db.Uuid
+  family    Family    @relation(fields: [familyId], references: [id])
+  title     String
+  perimeter Perimeter
+  dueAt     DateTime?
+  progress  Int       @default(0)
+}
+
+// Файл лежит в Timeweb S3 зашифрованным (SSE-C, ключ на документ из KMS/Vault);
+// в базе — только метаданные. Выдача — presigned URL на 5 минут с записью в audit.
+model Document {
+  id        String    @id @default(uuid()) @db.Uuid
+  familyId  String    @db.Uuid
+  family    Family    @relation(fields: [familyId], references: [id])
+  perimeter Perimeter
+  title     String
+  s3Key     String    @unique
+  sha256    String
+  keyRef    String // ссылка на ключ шифрования, не сам ключ
+  createdAt DateTime  @default(now())
+}
+
+model Template {
+  id       String   @id @default(uuid()) @db.Uuid
+  title    String
+  category String
+  versions TemplateVersion[]
+}
+
+model TemplateVersion {
+  id         String   @id @default(uuid()) @db.Uuid
+  templateId String   @db.Uuid
+  template   Template @relation(fields: [templateId], references: [id])
+  locale     Locale
+  s3Key      String
+  reconciled Boolean  @default(false) // сверена с остальными языковыми версиями
+}
+
+model LegalNorm {
+  id         String   @id @default(uuid()) @db.Uuid
+  ref        String // «ФЗ-63, ст. 8», «Ptk. 6:310. §»
+  country    String   @db.Char(2)
+  source     String // pravo.gov.ru, njt.hu, eur-lex
+  origLocale Locale
+  textRu     String
+  textEn     String
+  textHu     String
+  versionAt  DateTime // дата редакции
+}
+
+// Неизменяемый журнал: только INSERT (права на UPDATE/DELETE отозваны), каждая запись хэширует предыдущую.
+model AuditEvent {
+  id       BigInt   @id @default(autoincrement())
+  at       DateTime @default(now())
+  userId   String   @db.Uuid
+  user     User     @relation(fields: [userId], references: [id])
+  familyId String?  @db.Uuid
+  action   String
+  target   String?
+  ip       String?
+  prevHash String
+  hash     String   @unique
+}
