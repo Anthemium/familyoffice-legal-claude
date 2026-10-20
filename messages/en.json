@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "FAMILY OFFICE LEGAL · A Family Office led by an advocate",
-    "description": "A family office protected by attorney–client privilege. Markov Group Bar Association: Russia, Hungary, the EU."
+    "description": "A family office protected by attorney–client privilege. Markov Group Bar Association.",
+    "ogAlt": "G. B. Piranesi. The Pantheon. Family Office Legal by Markov Group"
   },
   "nav": {
     "by": "by Markov Group",
@@ -251,7 +252,12 @@
   },
   "footer": {
     "rights": "Markov Group Bar Association. This site is not a public offer.",
-    "art": "All artworks are in the public domain (Wikimedia Commons, Rijksmuseum)."
+    "art": "All artworks are in the public domain (Wikimedia Commons, Rijksmuseum).",
+    "privacy": "Personal data processing policy",
+    "terms": "Website terms of use",
+    "consent": "Consent to personal data processing",
+    "markov": "Main website of the firm",
+    "legal": "Documents"
   },
   "family": {
     "title": "Family office",

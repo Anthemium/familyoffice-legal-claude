@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "FAMILY OFFICE LEGAL · Ügyvéd által irányított Family Office",
-    "description": "Ügyvédi titoktartással védett családi iroda. Markov Group ügyvédi társulás: Oroszország, Magyarország, EU."
+    "description": "Ügyvédi titoktartással védett családi iroda. Markov Group ügyvédi társulás.",
+    "ogAlt": "G. B. Piranesi. A Pantheon. Family Office Legal by Markov Group"
   },
   "nav": {
     "by": "by Markov Group",
@@ -251,7 +252,12 @@
   },
   "footer": {
     "rights": "Markov Group ügyvédi társulás. Az oldal nem minősül nyilvános ajánlattételnek.",
-    "art": "Valamennyi műalkotás közkincs (Wikimedia Commons, Rijksmuseum)."
+    "art": "Valamennyi műalkotás közkincs (Wikimedia Commons, Rijksmuseum).",
+    "privacy": "Személyes adatkezelési szabályzat",
+    "terms": "A weboldal használati szabályai",
+    "consent": "Hozzájárulás a személyes adatok kezeléséhez",
+    "markov": "A társulás fő weboldala",
+    "legal": "Dokumentumok"
   },
   "family": {
     "title": "Családi felület",
