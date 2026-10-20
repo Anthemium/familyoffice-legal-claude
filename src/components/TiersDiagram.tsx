@@ -47,13 +47,13 @@ export function TiersDiagram() {
         <div className="rounded-[24px] border border-madder/20 bg-vellum px-6 py-7 md:px-8">
           <p className="flex items-baseline gap-3">
             <span className="font-serif text-[20px] italic text-gold">II</span>
-            <span className="label-caps text-lapis">{t("core")}</span>
+            <span className="label-caps text-ink-3">{t("core")}</span>
           </p>
           <ul className="mt-4 grid border-t border-hair sm:grid-cols-2">
             {core.map((x, i) => (
               <li
                 key={x}
-                className={`border-b border-hair py-4 font-serif text-[21px] font-medium leading-snug text-lapis ${i % 2 === 1 ? "sm:border-l sm:pl-6" : "sm:pr-6"} ${i >= core.length - 2 ? "sm:border-b-0" : ""} ${i === core.length - 1 ? "border-b-0" : ""}`}
+                className={`border-b border-hair py-4 font-serif text-[21px] font-medium leading-snug text-ink ${i % 2 === 1 ? "sm:border-l sm:pl-6" : "sm:pr-6"} ${i >= core.length - 2 ? "sm:border-b-0" : ""} ${i === core.length - 1 ? "border-b-0" : ""}`}
               >
                 {x}
               </li>
