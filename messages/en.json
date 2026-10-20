@@ -19,7 +19,7 @@
   },
   "hero": {
     "eyebrow": "Markov Group Bar Association · 30 years of practice",
-    "lead": "A family office run by an advocate, not a bank. Everything you entrust to us — ownership structure, transactions, disputes, succession — is protected by professional secrecy law in Russia, Hungary and the EU.",
+    "lead": "Unlike conventional family offices, whose managers are not bound by advocate secrecy law, an advocate-led family office operates under strictly protected confidentiality: everything about you, your assets, disputes, travel and habits is covered by advocate secrecy under Article 8 of Law No. 63-FZ — so it cannot be demanded, used or disclosed at the discretion of a manager or third parties.",
     "cta": "Request a private meeting",
     "cta2": "Explore the platform",
     "basis": "Art. 8, Federal Law 63-FZ on Advocacy · Üttv. § 9 (Hungary) · Legal Professional Privilege",
@@ -63,7 +63,7 @@
   "tiers": {
     "eyebrow": "II · Architecture",
     "title": "Three tiers of capital. One perimeter of privilege.",
-    "lead": "Unlike conventional family offices, whose managers are not bound by advocate secrecy law, an advocate-led family office operates under strictly protected confidentiality: everything about you, your assets, disputes, travel and habits is covered by advocate secrecy under Article 8 of Law No. 63-FZ — so it cannot be demanded, used or disclosed at the discretion of a manager or third parties.",
+    "lead": "This is how leading international practices structure family offices: the advocate stands between the family and its assets and controls both flows — instructions down and reporting up.",
     "upper": "Tier I · Family and ownership",
     "upperItems": [
       "Family council",
@@ -612,12 +612,12 @@
   "journal": {
     "eyebrow": "Insights",
     "title": "Journal",
-    "lead": "International practice of advocate-led family offices in eight articles: models, privilege, regulation, transparency, economics and choosing a model.",
+    "lead": "International practice of advocate-led family offices: models, privilege, regulation, transparency, economics and choosing a model.",
     "read": "Read",
     "min": "min",
     "all": "All articles",
     "next": "Next article",
-    "homeTitle": "International practice: eight articles",
+    "homeTitle": "International practice",
     "homeCta": "All articles",
     "disclaimer": "Based on an analytical review of international practice (2026); for information only. This is not legal advice; whether a rule applies to a specific situation is for an advocate to determine.",
     "sources": "Sources"

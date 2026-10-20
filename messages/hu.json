@@ -19,7 +19,7 @@
   },
   "hero": {
     "eyebrow": "Markov Group ügyvédi társulás · 30 év gyakorlat",
-    "lead": "Családi iroda, amelyet ügyvéd irányít, nem bank. Mindaz, amit ránk bíz — tulajdonosi struktúra, ügyletek, viták, öröklés —, Oroszországban, Magyarországon és az EU-ban az ügyvédi titoktartásról szóló törvények védelme alatt áll.",
+    "lead": "A hagyományos családi irodákkal szemben, ahol a vezetőket nem köti az ügyvédi titokról szóló törvény, az ügyvédi családi iroda szigorúan védett bizalmasság mellett működik: minden Önről, vagyonáról, jogvitáiról, utazásairól és szokásairól szóló adat a 63-FZ törvény 8. cikke szerinti ügyvédi titok védelme alatt áll — így ezeket nem lehet kikérni, felhasználni vagy a vezető vagy harmadik felek belátása szerint felfedni.",
     "cta": "Személyes találkozó kérése",
     "cta2": "A platform megtekintése",
     "basis": "63-FZ törvény 8. cikk (Oroszország) · Üttv. 9. § · Legal Professional Privilege",
@@ -63,7 +63,7 @@
   "tiers": {
     "eyebrow": "II · Felépítés",
     "title": "A vagyon három szintje. Egyetlen titoktartási kör.",
-    "lead": "A hagyományos családi irodákkal szemben, ahol a vezetőket nem köti az ügyvédi titokról szóló törvény, az ügyvédi családi iroda szigorúan védett bizalmasság mellett működik: minden Önről, vagyonáról, jogvitáiról, utazásairól és szokásairól szóló adat a 63-FZ törvény 8. cikke szerinti ügyvédi titok védelme alatt áll — így ezeket nem lehet kikérni, felhasználni vagy a vezető vagy harmadik felek belátása szerint felfedni.",
+    "lead": "Így épülnek fel a vezető nemzetközi irodák családi irodái: az ügyvéd a család és a vagyon között áll, és mindkét irányt ellenőrzi — lefelé az utasításokat, felfelé a beszámolást.",
     "upper": "I. szint · Család és tulajdon",
     "upperItems": [
       "Családi tanács",
@@ -612,12 +612,12 @@
   "journal": {
     "eyebrow": "Elemzések",
     "title": "Folyóirat",
-    "lead": "Az ügyvédi irányítású családi irodák nemzetközi gyakorlata nyolc cikkben: modellek, ügyvédi titok, szabályozás, átláthatóság, gazdaságtan és a modell kiválasztása.",
+    "lead": "Az ügyvédi irányítású családi irodák nemzetközi gyakorlata: modellek, ügyvédi titok, szabályozás, átláthatóság, gazdaságtan és a modell kiválasztása.",
     "read": "Elolvasom",
     "min": "perc",
     "all": "Összes cikk",
     "next": "Következő cikk",
-    "homeTitle": "Nemzetközi gyakorlat: nyolc cikk",
+    "homeTitle": "Nemzetközi gyakorlat",
     "homeCta": "Összes cikk",
     "disclaimer": "A nemzetközi gyakorlat elemző áttekintése (2026) alapján készült, tájékoztató jellegű. Nem minősül jogi tanácsadásnak; a szabályok konkrét helyzetre való alkalmazhatóságáról ügyvéd dönt.",
     "sources": "Források"
