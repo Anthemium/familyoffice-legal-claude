@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "FAMILY OFFICE LEGAL · Ügyvédi irányítású családi iroda",
+    "title": "FAMILY OFFICE LEGAL · Ügyvéd által irányított Family Office",
     "description": "Ügyvédi titoktartással védett családi iroda. Markov Group ügyvédi társulás: Oroszország, Magyarország, EU."
   },
   "nav": {
@@ -15,18 +15,18 @@
     "login": "Belépés",
     "family": "Családi felület",
     "studiolo": "Ügyvédi Studiolo",
-    "back": "Vissza az oldalra"
+    "back": "Vissza az oldalra",
+    "journal": "Elemzések"
   },
   "hero": {
     "eyebrow": "Markov Group ügyvédi társulás · 30 év gyakorlat",
-    "title1": "A család vagyona",
-    "title2": "az ügyvédi titoktartás",
-    "title3": "védelme alatt",
     "lead": "Családi iroda, amelyet ügyvéd irányít, nem bank. Mindaz, amit ránk bíz — tulajdonosi struktúra, ügyletek, viták, öröklés —, Oroszországban, Magyarországon és az EU-ban az ügyvédi titoktartásról szóló törvények védelme alatt áll.",
     "cta": "Személyes találkozó kérése",
     "cta2": "A platform megtekintése",
     "basis": "63-FZ törvény 8. cikk (Oroszország) · Üttv. 9. § · Legal Professional Privilege",
-    "caption": "G. B. Piranesi · A Pantheon · Vedute di Roma, kb. 1761 · Rijksmuseum · Közkincs"
+    "caption": "G. B. Piranesi · A Pantheon · Vedute di Roma, kb. 1761 · Rijksmuseum · Közkincs",
+    "title": "Ügyvéd által irányított Family Office",
+    "subtitle": "a privilégiumok, a biztonság és a nemzetközi lehetőségek új szintje"
   },
   "why": {
     "eyebrow": "I · Alapelv",
@@ -130,43 +130,59 @@
     ]
   },
   "models": {
-    "eyebrow": "IV · Modell",
-    "title": "Melyik családi iroda modell illik az Ön vagyonához",
-    "lead": "A nemzetközi gyakorlat négy modellt alakított ki. Mozgassa a csúszkákat — megmutatjuk, melyiket választanánk mi, és mennyibe kerül a bankhoz vagy a saját stábhoz képest.",
-    "capital": "A család vagyona",
-    "complexity": "A struktúra összetettsége",
-    "complexityLevels": [
-      "Egy joghatóság, likvid vagyon",
-      "Vállalkozás, ingatlan, 2–3 ország",
-      "Trösztök, alapítványok, ügyletek, 4+ ország"
+    "eyebrow": "IV · Modellek",
+    "title": "Az ügyvédi irányítású családi iroda négy modellje",
+    "lead": "A modellt a család vagyonának nagysága, az alapító bevonódása és a joghatóság szabályozási korlátai határozzák meg.",
+    "rows": [
+      "Jellemző szereplők",
+      "Jogállás",
+      "Bizalmi szerepek",
+      "Ügyvédi titok",
+      "Optimális vagyon"
     ],
-    "recommended": "Javasolt modell",
-    "m1": {
-      "name": "Virtuális családi iroda",
-      "who": "Az ügyvéd koordinálja a család összes tanácsadóját",
-      "privilege": "A titoktartás legerősebb védelme"
-    },
-    "m2": {
-      "name": "Dedikált tanácsadó társaság",
-      "who": "Külön szervezet látja el a vezetési és bizalmi feladatokat, a jogiakat az ügyvédi iroda",
-      "privilege": "Titoktartás az ügyvédi irodán keresztül"
-    },
-    "m3": {
-      "name": "Bizalmi hibrid",
-      "who": "Trösztszárny: protektorok, igazgatók, alapítványi kurátorok",
-      "privilege": "Titoktartás + bizalmi diszkréció"
-    },
-    "m4": {
-      "name": "Belső főjogász",
-      "who": "Saját iroda, ügyvéd mint General Counsel, az ügyvédi iroda mint külső kör",
-      "privilege": "Szigorú levelezési fegyelmet igényel"
-    },
-    "cost": "Becsült éves költség",
-    "bank": "Bank, a vagyon 0,8%-a",
-    "sfo": "Saját stáb",
-    "ours": "Ügyvédi iroda, megbízási díj",
-    "perYear": "évente",
-    "note": "Szemléltetés a kutatás piaci viszonyszámai alapján. Nem ajánlattétel; a díjat a megbízási szerződés határozza meg."
+    "m": [
+      {
+        "name": "Külső jogtanácsos / virtuális családi iroda",
+        "v": [
+          "McDermott Will & Emery, Ropes & Gray, Dana Whiting Law",
+          "Ügyvédi társulás, ügyvédi iroda",
+          "Korlátozott: bizalmi vagyonkezelők és PTC-k tanácsadása",
+          "A legerősebb — a jog és az üzlet szigorú elválasztásával",
+          "50–500 M $"
+        ]
+      },
+      {
+        "name": "Dedikált tanácsadó társaság az ügyvédi irodánál",
+        "v": [
+          "MDR Mayfair (Mishcon de Reya csoport)",
+          "Önálló tanácsadó jogi személy az ügyvédi csoporton belül",
+          "Teljes: tröszt-protektorok, PTC- és FIC-igazgatók, alapítványi kurátorok",
+          "Közvetett — az anyairoda bevonásával",
+          "100 M – 1 Mrd $"
+        ]
+      },
+      {
+        "name": "Trösztcég / bizalmi hibrid",
+        "v": [
+          "Withers (WITCO), Ogier, CC Malta",
+          "Engedéllyel rendelkező trösztcég vagy az iroda bizalmi szárnya",
+          "Teljes: társasági vagyonkezelő, végrendeleti végrehajtó, MLRO / CO / DPO",
+          "Kombinált: titok és bizalmi diszkréció",
+          "100 M – 2 Mrd $"
+        ]
+      },
+      {
+        "name": "Főjogász a saját iroda élén",
+        "v": [
+          "Nagy egycsaládos irodák belső GC-i / CLO-i",
+          "Felsővezető a családi struktúrán belül",
+          "Belső igazgató, társasági titkár, befektetési bizottsági tag",
+          "Belső jogászi privilégium — nagy a felhígulás kockázata",
+          "500 M $-tól"
+        ]
+      }
+    ],
+    "note": "A nemzetközi gyakorlat összehasonlító áttekintése (2026) alapján."
   },
   "juris": {
     "eyebrow": "V · Joghatóságok",
@@ -591,5 +607,49 @@
     "dash": "Irányítópultok",
     "dashNote": "A banki alkalmazásokból az ergonómiát vesszük át: nagy számok, puha 24px-es kártyák, történetek felül, alsó navigáció telefonon. A különbség: papír háttér, talpas címek és pigmentpaletta.",
     "artCaption": "Johannes Vermeer · A geográfus, 1669 · Städel Múzeum, Frankfurt · Közkincs"
+  },
+  "stats": {
+    "eyebrow": "Piac",
+    "title": "A családi iroda nem ritkaság, hanem a nagy vagyonok standardja",
+    "lead": "A családi irodák régóta a vagyonirányítás intézményes formáját jelentik. A világ vezető ügyvédi irodái — McDermott Will & Emery, Withers, Macfarlanes, Mishcon de Reya, Ropes & Gray — külön szakterületet működtetnek számukra.",
+    "items": [
+      {
+        "v": "8000+",
+        "l": "családi iroda működik a világon 2026-ban"
+      },
+      {
+        "v": "1,6 Mrd $",
+        "l": "a családok átlagos vagyona az intézményi családi irodák körében"
+      },
+      {
+        "v": "800+",
+        "l": "családi iroda a DIFC-ben (Dubaj); több mint 200 egyetlen év alatt nyílt"
+      },
+      {
+        "v": "63%",
+        "l": "a családi irodák közül ennyinek van igazgatótanácsa vagy tanácsadó testülete"
+      },
+      {
+        "v": "6,6 M $+",
+        "l": "évente a saját stáb költsége 1 milliárd dollár feletti vagyonnál"
+      },
+      {
+        "v": "430 Mrd $",
+        "l": "kezelt vagyon a Stonehage Fleming, a Stanhope Capital és a Corient 2025-ös egyesülése után"
+      }
+    ],
+    "source": "Források: J.P. Morgan Global Family Office Report 2026; Altss; DIFC-adatok; ágazati felmérések 2025–2026."
+  },
+  "journal": {
+    "eyebrow": "Elemzések",
+    "title": "Folyóirat",
+    "lead": "Az ügyvédi irányítású családi irodák nemzetközi gyakorlata nyolc cikkben: modellek, ügyvédi titok, szabályozás, átláthatóság, gazdaságtan és a modell kiválasztása.",
+    "read": "Elolvasom",
+    "min": "perc",
+    "all": "Összes cikk",
+    "next": "Következő cikk",
+    "homeTitle": "Nemzetközi gyakorlat: nyolc cikk",
+    "homeCta": "Összes cikk",
+    "disclaimer": "A nemzetközi gyakorlat elemző áttekintése (2026) alapján készült, tájékoztató jellegű. Nem minősül jogi tanácsadásnak; a szabályok konkrét helyzetre való alkalmazhatóságáról ügyvéd dönt."
   }
 }

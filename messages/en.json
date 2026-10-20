@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "FAMILY OFFICE LEGAL · A family office led by advocates",
+    "title": "FAMILY OFFICE LEGAL · A Family Office led by an advocate",
     "description": "A family office protected by attorney–client privilege. Markov Group Bar Association: Russia, Hungary, the EU."
   },
   "nav": {
@@ -15,18 +15,18 @@
     "login": "Sign in",
     "family": "Family office",
     "studiolo": "Counsel's Studiolo",
-    "back": "Back to site"
+    "back": "Back to site",
+    "journal": "Insights"
   },
   "hero": {
     "eyebrow": "Markov Group Bar Association · 30 years of practice",
-    "title1": "Family capital",
-    "title2": "protected by",
-    "title3": "attorney–client privilege",
     "lead": "A family office run by an advocate, not a bank. Everything you entrust to us — ownership structure, transactions, disputes, succession — is protected by professional secrecy law in Russia, Hungary and the EU.",
     "cta": "Request a private meeting",
     "cta2": "Explore the platform",
     "basis": "Art. 8, Federal Law 63-FZ on Advocacy · Üttv. § 9 (Hungary) · Legal Professional Privilege",
-    "caption": "G. B. Piranesi · The Pantheon · Vedute di Roma, c. 1761 · Rijksmuseum · Public Domain"
+    "caption": "G. B. Piranesi · The Pantheon · Vedute di Roma, c. 1761 · Rijksmuseum · Public Domain",
+    "title": "A Family Office led by an advocate",
+    "subtitle": "a new level of privilege, security and international reach"
   },
   "why": {
     "eyebrow": "I · Principle",
@@ -130,43 +130,59 @@
     ]
   },
   "models": {
-    "eyebrow": "IV · Model",
-    "title": "Which family office model fits your capital",
-    "lead": "International practice has settled on four models. Move the sliders — we will show the one we would choose ourselves, and what it costs compared with a bank or your own staff.",
-    "capital": "Family capital",
-    "complexity": "Structural complexity",
-    "complexityLevels": [
-      "One jurisdiction, liquid assets",
-      "Business, real estate, 2–3 countries",
-      "Trusts, foundations, deals, 4+ countries"
+    "eyebrow": "IV · Models",
+    "title": "Four models of the advocate-led family office",
+    "lead": "The model depends on the size of the family's assets, the founder's involvement and the regulatory limits of the jurisdiction.",
+    "rows": [
+      "Typical players",
+      "Status",
+      "Fiduciary roles",
+      "Privilege",
+      "Optimal wealth"
     ],
-    "recommended": "Recommended model",
-    "m1": {
-      "name": "Virtual family office",
-      "who": "An advocate quarterbacks every adviser of the family",
-      "privilege": "Maximum privilege protection"
-    },
-    "m2": {
-      "name": "Dedicated consultancy",
-      "who": "A separate entity takes management and fiduciary roles; the bar firm keeps the legal ones",
-      "privilege": "Privilege via the bar firm"
-    },
-    "m3": {
-      "name": "Fiduciary hybrid",
-      "who": "A trust wing: protectors, directors, foundation guardians",
-      "privilege": "Privilege + fiduciary confidentiality"
-    },
-    "m4": {
-      "name": "In-house General Counsel",
-      "who": "Own office with an advocate as GC; the bar firm as the outer perimeter",
-      "privilege": "Requires strict correspondence hygiene"
-    },
-    "cost": "Estimated annual cost",
-    "bank": "Bank, 0.8% of assets",
-    "sfo": "Own staff",
-    "ours": "Advocate-led office, retainer",
-    "perYear": "a year",
-    "note": "Illustration based on market benchmarks from the research. Not an offer; fees are set by the legal services agreement."
+    "m": [
+      {
+        "name": "Outside counsel / virtual family office",
+        "v": [
+          "McDermott Will & Emery, Ropes & Gray, Dana Whiting Law",
+          "Law partnership or law firm",
+          "Limited: advising fiduciaries and PTCs",
+          "Maximum — with strict separation of law from commerce",
+          "$50–500M"
+        ]
+      },
+      {
+        "name": "Dedicated consultancy within a law firm",
+        "v": [
+          "MDR Mayfair (Mishcon de Reya group)",
+          "Separate consulting entity within a legal group",
+          "Full: trust protectors, PTC and FIC directors, foundation guardians",
+          "Indirect — via the parent firm",
+          "$100M – $1B"
+        ]
+      },
+      {
+        "name": "Trust corporation / fiduciary hybrid",
+        "v": [
+          "Withers (WITCO), Ogier, CC Malta",
+          "Licensed trust company or fiduciary wing of a firm",
+          "Full: corporate trustee, executor, MLRO / CO / DPO",
+          "Combined: privilege and fiduciary confidentiality",
+          "$100M – $2B"
+        ]
+      },
+      {
+        "name": "General Counsel heading the family's own office",
+        "v": [
+          "In-house GCs / CLOs of large single-family offices",
+          "Executive within the family structure",
+          "Internal director, company secretary, investment committee member",
+          "In-house corporate privilege — high risk of dilution",
+          "From $500M"
+        ]
+      }
+    ],
+    "note": "Based on a comparative review of international practice (2026)."
   },
   "juris": {
     "eyebrow": "V · Jurisdictions",
@@ -591,5 +607,49 @@
     "dash": "Dashboards",
     "dashNote": "From banking apps we take the ergonomics: large figures, soft 24px cards, stories on top, bottom navigation on the phone. The difference: paper background, serif headings and a pigment palette.",
     "artCaption": "Johannes Vermeer · The Geographer, 1669 · Städel Museum, Frankfurt · Public Domain"
+  },
+  "stats": {
+    "eyebrow": "Market",
+    "title": "A family office is not a rarity — it is the standard for significant wealth",
+    "lead": "Family offices have long been an institutional form of wealth governance. The world's leading law firms — McDermott Will & Emery, Withers, Macfarlanes, Mishcon de Reya, Ropes & Gray — run dedicated practices for them.",
+    "items": [
+      {
+        "v": "8,000+",
+        "l": "family offices worldwide as of 2026"
+      },
+      {
+        "v": "$1.6B",
+        "l": "average family net worth among institutional family offices"
+      },
+      {
+        "v": "800+",
+        "l": "family offices in DIFC (Dubai); more than 200 opened in a single year"
+      },
+      {
+        "v": "63%",
+        "l": "of family offices have a board of directors or an advisory board"
+      },
+      {
+        "v": "$6.6M+",
+        "l": "a year is the cost of in-house staff for an office with over $1B in assets"
+      },
+      {
+        "v": "$430B",
+        "l": "under management after Stonehage Fleming, Stanhope Capital and Corient combined in 2025"
+      }
+    ],
+    "source": "Sources: J.P. Morgan Global Family Office Report 2026; Altss; DIFC data; industry surveys 2025–2026."
+  },
+  "journal": {
+    "eyebrow": "Insights",
+    "title": "Journal",
+    "lead": "International practice of advocate-led family offices in eight articles: models, privilege, regulation, transparency, economics and choosing a model.",
+    "read": "Read",
+    "min": "min",
+    "all": "All articles",
+    "next": "Next article",
+    "homeTitle": "International practice: eight articles",
+    "homeCta": "All articles",
+    "disclaimer": "Based on an analytical review of international practice (2026); for information only. This is not legal advice; whether a rule applies to a specific situation is for an advocate to determine."
   }
 }
