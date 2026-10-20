@@ -9,6 +9,12 @@ import { Donut } from "@/components/family/Donut";
 import { Composer } from "@/components/family/Composer";
 import { StructureMap } from "@/components/family/StructureMap";
 import { Shield } from "@/components/family/Shield";
+import { Vault } from "@/components/family/Vault";
+import { LedgerMini } from "@/components/family/LedgerMini";
+import { LedgerSessionProvider } from "@/components/ledger/LedgerSession";
+
+// Демо-пользователь кабинета; в рабочей версии — из сессии WebAuthn.
+const ACTOR = { id: "usr-valden-principal", name: "V. Valden", role: "PRINCIPAL" } as const;
 import { asset } from "@/lib/asset";
 
 // Доли семейного баланса (демо): € млн
@@ -65,6 +71,7 @@ function FamilyDashboard() {
   ];
 
   return (
+    <LedgerSessionProvider actor={ACTOR} method="passkey">
     <div className="min-h-screen bg-carta-2 pb-24 lg:pb-0">
       {/* Верхняя панель */}
       <header className="sticky top-0 z-30 border-b border-hair/70 bg-carta-2/85 backdrop-blur">
@@ -160,6 +167,14 @@ function FamilyDashboard() {
             <Shield />
           </section>
 
+          {/* Документы и реестр действий */}
+          <section className={`${card} lg:col-span-7`}>
+            <Vault />
+          </section>
+          <section className={`${card} lg:col-span-5`}>
+            <LedgerMini />
+          </section>
+
           {/* Структура */}
           <section className={`${card} lg:col-span-7`}>
             <div className="flex items-center gap-2"><Network size={17} className="text-lapis" /><h2 className="text-[17px] font-semibold">{t("structure")}</h2></div>
@@ -230,5 +245,6 @@ function FamilyDashboard() {
         </div>
       </nav>
     </div>
+    </LedgerSessionProvider>
   );
 }

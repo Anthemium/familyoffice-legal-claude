@@ -421,6 +421,7 @@
     "lock": "Felület bezárása",
     "menu": [
       "Ügyek",
+      "Üzenetek",
       "Minták",
       "Jogszabályok",
       "Hozzáférés",
@@ -651,5 +652,124 @@
     "homeTitle": "Nemzetközi gyakorlat: nyolc cikk",
     "homeCta": "Összes cikk",
     "disclaimer": "A nemzetközi gyakorlat elemző áttekintése (2026) alapján készült, tájékoztató jellegű. Nem minősül jogi tanácsadásnak; a szabályok konkrét helyzetre való alkalmazhatóságáról ügyvéd dönt."
+  },
+  "ledger": {
+    "title": "Műveleti nyilvántartás",
+    "lead": "A felületeken végzett minden művelet — belépés, dokumentum feltöltése, üzenet küldése és megnyitása — saját azonosítót, pontos időt, eszközadatot és aláírást kap, és hash-láncba kerül. Egyetlen bejegyzés sem módosítható vagy törölhető észrevétlenül: az ellenőrzés pontosan megmutatja, hol szakad meg a lánc.",
+    "types": {
+      "session_start": "Belépés",
+      "session_end": "Kilépés",
+      "document_upload": "Dokumentum feltöltése",
+      "document_open": "Dokumentum megnyitása",
+      "message_send": "Üzenet küldése",
+      "message_open": "Üzenet megnyitása",
+      "template_download": "Minta kiadása",
+      "shield_call": "Pajzs hívása"
+    },
+    "roles": {
+      "PRINCIPAL": "Családfő",
+      "FAMILY_MEMBER": "Családtag",
+      "PARTNER": "Partner",
+      "ADVOCATE": "Ügyvéd",
+      "PARALEGAL": "Asszisztens"
+    },
+    "stats": {
+      "events": "Esemény",
+      "sessions": "Munkamenet",
+      "devices": "Eszköz",
+      "root": "Merkle-gyökér"
+    },
+    "status": {
+      "ok": "A lánc ép",
+      "broken": "Sérülés a(z) {n}. bejegyzésnél",
+      "checking": "Ellenőrzés…",
+      "empty": "A napló üres"
+    },
+    "verifiedIn": "Ellenőrzött események: {n} · {ms} ms",
+    "actions": {
+      "verify": "Lánc ellenőrzése",
+      "export": "Kivonat letöltése",
+      "tamper": "Hamisítás szimulálása",
+      "reset": "Demó törlése",
+      "demo": "Demó forgatókönyv"
+    },
+    "tampered": "A(z) {n}. bejegyzést a rendszer megkerülésével módosították (az idő egy órával eltolva). Az alábbi ellenőrzés mutatja a szakadást.",
+    "graph": "Műveleti gráf",
+    "graphNote": "Oszlopok: résztvevők, sorok: események sorrendben. A vékony vonal a hash-lánc, a színes ívek az ok-okozati kapcsolatok.",
+    "select": "Válasszon eseményt a gráfon",
+    "f": {
+      "id": "Esemény azonosító",
+      "seq": "Helye a láncban",
+      "time": "Idő (UTC)",
+      "local": "Helyi idő",
+      "type": "Művelet",
+      "actor": "Ki",
+      "session": "Munkamenet",
+      "device": "Eszköz",
+      "fingerprint": "Eszköz-ujjlenyomat",
+      "deviceId": "Eszköz azonosító",
+      "ip": "IP-cím",
+      "ipNote": "a szerver rögzíti",
+      "subject": "Tárgy",
+      "contentHash": "Tartalom SHA-256",
+      "perimeter": "Kör",
+      "parents": "Előzmények",
+      "prevHash": "Előző hash",
+      "hash": "Esemény hash",
+      "sig": "Aláírás",
+      "proof": "Tartalmazási bizonyíték",
+      "proofSteps": "{n} lépés a gyökérig"
+    },
+    "checks": {
+      "hash": "A hash újraszámolva egyezik",
+      "link": "Kapcsolat az előző bejegyzéssel",
+      "sig": "Munkamenet-kulccsal aláírva",
+      "parents": "Az előzmények léteznek és korábbiak"
+    },
+    "how": {
+      "title": "Hogyan működik",
+      "items": [
+        "Az UUIDv7 azonosítók egyediek és időrendbe rendezettek, minden lépés automatikusan kapja.",
+        "Minden bejegyzés tartalmazza az előző SHA-256 hash-ét: egy bejegyzés módosítása az utána következő egész láncot megtöri — mint a blokkláncban, de nyilvános hálózat nélkül.",
+        "Az ok-okozati kapcsolatok gráfot alkotnak: az „üzenet megnyitása” az „üzenet küldésére”, minden művelet a belépésre és az eszközre mutat.",
+        "A belépést munkamenet-kulcs írja alá, éles változatban a felhasználó hardverkulcsa (WebAuthn). Dokumentumok és szövegek nem kerülnek a naplóba, csak a hash-ük."
+      ]
+    },
+    "legal": {
+      "title": "Jogi pontosság",
+      "text": "A Merkle-gyökér egyetlen hash-sel rögzíti az egész naplót. Éles változatban óránként a társulás szervere aláírja, minősített időbélyeggel látja el (eIDAS Magyarország és az EU számára, a 63-FZ szerinti akkreditált szolgáltató Oroszország számára), és felülírhatatlan tárolóba menti. Bármely eseményről kivonat nyújtható be a bíróságnak tartalmazási bizonyítékkal, a napló többi részének felfedése nélkül."
+    },
+    "empty": "A napló üres. Lépjen be a családi felületre vagy a Studiolóba, és végezzen műveletet — vagy indítsa el a demó forgatókönyvet.",
+    "openFamily": "Családi felület",
+    "openStudiolo": "Studiolo",
+    "mini": {
+      "title": "Műveleti nyilvántartás",
+      "all": "Teljes napló",
+      "none": "A műveletek itt jelennek meg"
+    },
+    "demo": {
+      "msg": "Kérem, értékelje a magyar holdingunkkal kötendő kölcsönszerződés kockázatait, és készítsen tárgyalási álláspontot.",
+      "doc": "Loan agreement draft v2"
+    },
+    "vault": {
+      "title": "Dokumentumtár",
+      "upload": "Dokumentum feltöltése",
+      "hint": "A fájl nem hagyja el az eszközt: csak a SHA-256 hash-e kerül a naplóba.",
+      "open": "Megnyitás",
+      "empty": "Még nincs dokumentum",
+      "uploaded": "Feltöltve"
+    },
+    "outbox": {
+      "title": "Elküldött",
+      "delivered": "Kézbesítve",
+      "read": "Az ügyvéd elolvasta · {time}"
+    },
+    "inbox": {
+      "title": "Üzenetek a családoktól",
+      "empty": "Még nincs üzenet — küldjön egyet a családi felületről.",
+      "open": "Megnyitás",
+      "opened": "Megnyitva",
+      "docs": "A család dokumentumai"
+    }
   }
 }

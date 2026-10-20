@@ -2,7 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Lock, Send, Split, AlertTriangle, ShieldCheck, Briefcase } from "lucide-react";
+import { Lock, Send, Split, AlertTriangle, ShieldCheck, Briefcase, CheckCheck, Check } from "lucide-react";
+import { findOpen, sendMessage, useLedgerEvents, useMessages } from "@/lib/ledger/client";
+import { shortId } from "@/lib/ledger/core";
+import { useLedgerSession } from "@/components/ledger/LedgerSession";
 
 // Маркеры коммерческого/инвестиционного вопроса на трёх языках.
 // В рабочей версии — классификатор на сервере коллегии; здесь — словарная эвристика для демо.
@@ -12,6 +15,10 @@ const sentences = (s: string) => s.split(/(?<=[.!?…])\s+/).map((x) => x.trim()
 
 export function Composer() {
   const t = useTranslations("family.compose");
+  const tl = useTranslations("ledger.outbox");
+  const session = useLedgerSession();
+  const messages = useMessages();
+  const events = useLedgerEvents();
   const [contour, setContour] = useState<"A" | "B">("A");
   const [text, setText] = useState("");
   const [split, setSplit] = useState(false);
@@ -23,7 +30,18 @@ export function Composer() {
     return { legal: all.filter((s) => !BUSINESS.test(s)), business: all.filter((s) => BUSINESS.test(s)) };
   }, [text]);
 
-  const reset = () => { setText(""); setSplit(false); setSent(true); setTimeout(() => setSent(false), 3500); };
+  // Каждое отправленное сообщение — событие message.send в реестре; при разделении — два события.
+  const send = async () => {
+    if (!session) return;
+    if (split) {
+      if (parts.legal.length) await sendMessage(session, parts.legal.join(" "), "A");
+      if (parts.business.length) await sendMessage(session, parts.business.join(" "), "B");
+    } else {
+      await sendMessage(session, text.trim(), contour);
+    }
+    setText(""); setSplit(false); setSent(true); setTimeout(() => setSent(false), 3500);
+  };
+  const outbox = messages.filter((m) => m.from === session?.actor.name).slice(-3).reverse();
 
   return (
     <div className="flex h-full flex-col">
@@ -82,14 +100,36 @@ export function Composer() {
       <div className="mt-3 flex items-center justify-between gap-3">
         <p className="hidden text-[11px] text-ink-3 sm:block">{t("hint")}</p>
         <button
-          disabled={!text.trim() || (mixed && !split)}
-          onClick={reset}
+          disabled={!session || !text.trim() || (mixed && !split)}
+          onClick={send}
           className={`ml-auto inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-[13px] font-medium text-carta transition-opacity disabled:opacity-35 ${contour === "A" ? "bg-madder" : "bg-lapis"}`}
         >
           <Send size={14} /> {contour === "A" ? t("send") : t("sendB")}
         </button>
       </div>
       {sent && <p className="mt-2 text-[12px] text-lapis" role="status">{t("sent")}</p>}
+
+      {outbox.length > 0 && (
+        <div className="mt-4 border-t border-hair pt-3">
+          <p className="label-caps !text-[9.5px] text-ink-3">{tl("title")}</p>
+          <ul className="mt-2 space-y-2">
+            {outbox.map((m) => {
+              const opened = findOpen(events, m.id)[0];
+              return (
+                <li key={m.id} className="flex items-center gap-3 text-[12.5px]">
+                  <span className={`h-2 w-2 shrink-0 rounded-full ${m.perimeter === "A" ? "bg-madder" : "bg-lapis"}`} />
+                  <span className="min-w-0 flex-1 truncate">{m.text}</span>
+                  <span className={`flex shrink-0 items-center gap-1 text-[11px] ${opened ? "text-lapis" : "text-ink-3"}`}>
+                    {opened ? <CheckCheck size={13} /> : <Check size={13} />}
+                    {opened ? tl("read", { time: opened.ts.slice(11, 16) + " UTC" }) : tl("delivered")}
+                  </span>
+                  <span className="hidden font-mono text-[10px] text-ink-3 md:inline">{shortId(m.sentEvent)}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

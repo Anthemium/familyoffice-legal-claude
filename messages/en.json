@@ -421,10 +421,11 @@
     "lock": "Close cabinet",
     "menu": [
       "Matters",
+      "Messages",
       "Templates",
       "Legislation",
       "Access",
-      "Log"
+      "Ledger"
     ],
     "matters": "Family matters",
     "mattersCols": [
@@ -651,5 +652,124 @@
     "homeTitle": "International practice: eight articles",
     "homeCta": "All articles",
     "disclaimer": "Based on an analytical review of international practice (2026); for information only. This is not legal advice; whether a rule applies to a specific situation is for an advocate to determine."
+  },
+  "ledger": {
+    "title": "Activity ledger",
+    "lead": "Every action in the cabinets — signing in, uploading a document, sending and opening a message — gets its own ID, exact time, device and signature and is added to a hash chain. No record can be altered or deleted unnoticed: verification shows exactly where the chain breaks.",
+    "types": {
+      "session_start": "Signed in",
+      "session_end": "Signed out",
+      "document_upload": "Document uploaded",
+      "document_open": "Document opened",
+      "message_send": "Message sent",
+      "message_open": "Message opened",
+      "template_download": "Template issued",
+      "shield_call": "Shield called"
+    },
+    "roles": {
+      "PRINCIPAL": "Family principal",
+      "FAMILY_MEMBER": "Family member",
+      "PARTNER": "Partner",
+      "ADVOCATE": "Advocate",
+      "PARALEGAL": "Paralegal"
+    },
+    "stats": {
+      "events": "Events",
+      "sessions": "Sessions",
+      "devices": "Devices",
+      "root": "Merkle root"
+    },
+    "status": {
+      "ok": "Chain intact",
+      "broken": "Break at record #{n}",
+      "checking": "Verifying…",
+      "empty": "Ledger is empty"
+    },
+    "verifiedIn": "Events verified: {n} · {ms} ms",
+    "actions": {
+      "verify": "Verify chain",
+      "export": "Download statement",
+      "tamper": "Simulate tampering",
+      "reset": "Clear demo",
+      "demo": "Play demo scenario"
+    },
+    "tampered": "Record #{n} was altered outside the system (time shifted by one hour). The check below shows the break.",
+    "graph": "Activity graph",
+    "graphNote": "Columns are participants, rows are events in order. The thin line is the hash chain, coloured arcs are causal links.",
+    "select": "Select an event in the graph",
+    "f": {
+      "id": "Event ID",
+      "seq": "Position in chain",
+      "time": "Time (UTC)",
+      "local": "Local time",
+      "type": "Action",
+      "actor": "Who",
+      "session": "Session",
+      "device": "Device",
+      "fingerprint": "Device fingerprint",
+      "deviceId": "Device ID",
+      "ip": "IP address",
+      "ipNote": "recorded by the server",
+      "subject": "Object",
+      "contentHash": "Content SHA-256",
+      "perimeter": "Perimeter",
+      "parents": "Causes",
+      "prevHash": "Previous hash",
+      "hash": "Event hash",
+      "sig": "Signature",
+      "proof": "Inclusion proof",
+      "proofSteps": "{n} steps to the root"
+    },
+    "checks": {
+      "hash": "Hash recomputed and matches",
+      "link": "Linked to the previous record",
+      "sig": "Signed with the session key",
+      "parents": "Causes exist and come first"
+    },
+    "how": {
+      "title": "How it works",
+      "items": [
+        "UUIDv7 IDs are unique and time-ordered and are assigned to every step automatically.",
+        "Each record contains the SHA-256 of the previous one: changing one record breaks the whole chain after it — like a blockchain, but without a public network.",
+        "Causal links form a graph: “message opened” points to “message sent”, every action points to the sign-in and its device.",
+        "Sign-in is signed with a session key — in production, the user's hardware key (WebAuthn). Documents and texts never enter the ledger, only their hashes."
+      ]
+    },
+    "legal": {
+      "title": "Legal precision",
+      "text": "The Merkle root fixes the whole ledger in one hash. In production it is signed by the firm's server every hour, sealed with a qualified time stamp (eIDAS for Hungary and the EU, an accredited provider under Law 63-FZ for Russia) and stored in write-once storage. A statement on any event can be produced in court with an inclusion proof, without disclosing the rest of the ledger."
+    },
+    "empty": "The ledger is empty. Open the family office or the Studiolo and take an action — or play the demo scenario.",
+    "openFamily": "Family office",
+    "openStudiolo": "Studiolo",
+    "mini": {
+      "title": "Activity ledger",
+      "all": "Full ledger",
+      "none": "Actions will appear here"
+    },
+    "demo": {
+      "msg": "Please assess the risks of the loan agreement with our Hungarian holding and prepare a negotiating position.",
+      "doc": "Loan agreement draft v2"
+    },
+    "vault": {
+      "title": "Document vault",
+      "upload": "Upload document",
+      "hint": "The file never leaves the device: only its SHA-256 enters the ledger.",
+      "open": "Open",
+      "empty": "No documents yet",
+      "uploaded": "Uploaded"
+    },
+    "outbox": {
+      "title": "Sent",
+      "delivered": "Delivered",
+      "read": "Read by counsel · {time}"
+    },
+    "inbox": {
+      "title": "Messages from families",
+      "empty": "No messages yet — send one from the family office.",
+      "open": "Open",
+      "opened": "Opened",
+      "docs": "Family documents"
+    }
   }
 }

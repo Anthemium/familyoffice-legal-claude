@@ -3,11 +3,18 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { ShieldAlert, PhoneCall, Check } from "lucide-react";
+import { append } from "@/lib/ledger/client";
+import { useLedgerSession } from "@/components/ledger/LedgerSession";
 
 // «Щит семьи»: экстренный вызов дежурного адвоката + памятка, открывается сразу.
 export function Shield() {
   const t = useTranslations("family");
   const [sent, setSent] = useState(false);
+  const session = useLedgerSession();
+  const call = () => {
+    setSent(true);
+    if (session) append(session, { type: "shield.call", perimeter: "A", meta: { channel: "duty advocate 24/7" } });
+  };
   const steps = t.raw("shieldSteps") as string[];
   return (
     <div className="flex h-full flex-col rounded-[var(--radius-card)] bg-madder p-6 text-carta">
@@ -19,7 +26,7 @@ export function Shield() {
         <>
           <p className="mt-3 flex-1 text-[13.5px] leading-relaxed text-carta/80">{t("shieldText")}</p>
           <button
-            onClick={() => setSent(true)}
+            onClick={call}
             className="mt-5 flex items-center justify-center gap-2 rounded-full bg-carta py-3.5 text-[14px] font-semibold text-madder transition-transform active:scale-[0.98]"
           >
             <PhoneCall size={16} /> {t("shieldCta")}

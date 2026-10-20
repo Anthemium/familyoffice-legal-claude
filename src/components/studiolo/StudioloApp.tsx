@@ -2,12 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { KeyRound, Check, Lock, LogOut, Briefcase, FileText, Scale, KeySquare, History, ArrowLeft, Download, Fingerprint } from "lucide-react";
+import { KeyRound, Check, Lock, LogOut, Briefcase, FileText, Scale, KeySquare, ArrowLeft, Fingerprint, MessagesSquare } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Seal } from "@/components/Seal";
 import { LangSwitch } from "@/components/LangSwitch";
 import { LAW } from "@/lib/law";
 import { asset } from "@/lib/asset";
+import { LedgerSessionProvider } from "@/components/ledger/LedgerSession";
+import { LedgerView } from "@/components/ledger/LedgerView";
+import { StudioloInbox, TemplateDownload } from "./StudioloInbox";
+
+const COUNSEL = { id: "usr-amarkov", name: "A. Markov", role: "PARTNER" } as const;
 
 type Access = "full" | "read" | "none";
 // Матрица доступов: строки — роли, столбцы — Контур A, Контур B, Шаблоны, Журнал.
@@ -20,7 +25,7 @@ const MATRIX: Access[][] = [
   ["none", "read", "none", "none"],
 ];
 
-const MENU_ICONS = [Briefcase, FileText, Scale, KeySquare, History];
+const MENU_ICONS = [Briefcase, MessagesSquare, FileText, Scale, KeySquare, Fingerprint];
 
 export function StudioloApp() {
   const t = useTranslations("studiolo");
@@ -101,11 +106,11 @@ export function StudioloApp() {
   const lawTabs = t.raw("lawTabs") as string[];
   const roles = t.raw("accessRoles") as string[];
   const accessCols = t.raw("accessCols") as string[];
-  const audit = t.raw("auditItems") as { t: string; a: string; h: string }[];
 
   const panel = "rounded-[var(--radius-card)] bg-noct-2 p-6 ring-1 ring-noct-line";
 
   return (
+    <LedgerSessionProvider actor={COUNSEL} method="passkey + YubiKey">
     <div className="min-h-screen bg-noct text-carta select-none">
       <div className="watermark" style={{ ["--wm" as string]: watermark }} aria-hidden />
 
@@ -176,7 +181,9 @@ export function StudioloApp() {
             </section>
           )}
 
-          {section === 1 && (
+          {section === 1 && <StudioloInbox />}
+
+          {section === 2 && (
             <section className={panel}>
               <h2 className="font-serif text-[28px]">{t("templates")}</h2>
               <p className="mt-2 max-w-2xl text-[13px] text-carta/55">{t("templatesNote")}</p>
@@ -193,7 +200,7 @@ export function StudioloApp() {
                           <span key={l} className={`rounded-md px-2 py-0.5 font-mono text-[10.5px] ${tp.langs.includes(l) ? "bg-carta/10 text-carta" : "text-carta/25 line-through"}`}>{l}</span>
                         ))}
                       </div>
-                      <Download size={16} className="text-carta/40 transition-colors group-hover:text-gold" />
+                      <TemplateDownload title={tp.t} />
                     </div>
                   </article>
                 ))}
@@ -201,7 +208,7 @@ export function StudioloApp() {
             </section>
           )}
 
-          {section === 2 && (
+          {section === 3 && (
             <section className={panel}>
               <h2 className="font-serif text-[28px]">{t("law")}</h2>
               <p className="mt-2 max-w-2xl text-[13px] text-carta/55">{t("lawNote")}</p>
@@ -233,7 +240,7 @@ export function StudioloApp() {
             </section>
           )}
 
-          {section === 3 && (
+          {section === 4 && (
             <section className={panel}>
               <h2 className="font-serif text-[28px]">{t("accessTitle")}</h2>
               <div className="mt-6 overflow-x-auto">
@@ -271,18 +278,10 @@ export function StudioloApp() {
             </section>
           )}
 
-          {section === 4 && (
-            <section className={panel}>
-              <h2 className="font-serif text-[28px]">{t("audit")}</h2>
-              <ul className="mt-5 divide-y divide-noct-line/70">
-                {audit.map((a) => (
-                  <li key={a.h} className="flex flex-wrap items-center gap-x-5 gap-y-1 py-4 text-[13.5px]">
-                    <span className="w-12 font-mono text-[12px] text-carta/50">{a.t}</span>
-                    <span className="min-w-0 flex-1">{a.a}</span>
-                    <span className="font-mono text-[11px] text-gold/70">sha256 {a.h}</span>
-                  </li>
-                ))}
-              </ul>
+          {/* Реестр действий: «выписка на пергаменте» поверх тёмного кабинета */}
+          {section === 5 && (
+            <section className="rounded-[var(--radius-card)] bg-carta-2 p-5 text-ink md:p-7">
+              <LedgerView showLinks={false} />
             </section>
           )}
 
@@ -302,5 +301,6 @@ export function StudioloApp() {
         </main>
       </div>
     </div>
+    </LedgerSessionProvider>
   );
 }

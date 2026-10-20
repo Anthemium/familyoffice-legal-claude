@@ -48,7 +48,7 @@ model User {
   locale      Locale       @default(ru)
   passkeys    Passkey[]
   memberships Member[]
-  audit       AuditEvent[]
+  ledger      LedgerEvent[]
 }
 
 model Passkey {
@@ -136,16 +136,41 @@ model LegalNorm {
   versionAt  DateTime // дата редакции
 }
 
-// Неизменяемый журнал: только INSERT (права на UPDATE/DELETE отозваны), каждая запись хэширует предыдущую.
-model AuditEvent {
-  id       BigInt   @id @default(autoincrement())
-  at       DateTime @default(now())
-  userId   String   @db.Uuid
-  user     User     @relation(fields: [userId], references: [id])
-  familyId String?  @db.Uuid
-  action   String
-  target   String?
-  ip       String?
-  prevHash String
-  hash     String   @unique
+// Реестр действий: append-only журнал с хэш-цепочкой. Триггеры, RLS и якоря — в migrations/ledger.sql,
+// алгоритмы — src/lib/ledger/core.ts, описание — docs/LEDGER.md.
+model LedgerEvent {
+  seq        BigInt   @id
+  id         String   @unique @db.Uuid // UUIDv7
+  ts         DateTime @default(now()) @db.Timestamptz(3)
+  type       String
+  familyId   String?  @map("family_id") @db.Uuid
+  actorId    String   @map("actor_id") @db.Uuid
+  user       User     @relation(fields: [actorId], references: [id])
+  sessionId  String   @map("session_id") @db.Uuid
+  deviceId   String   @map("device_id")
+  ip         String?  @db.Inet
+  subject    Json?
+  perimeter  String?  @db.Char(1)
+  parents    String[] @db.Uuid
+  body       Json
+  prevHash   String   @map("prev_hash") @db.Char(64)
+  hash       String   @unique @db.Char(64)
+  sigClient  String?  @map("sig_client")
+  sigServer  String   @map("sig_server")
+
+  @@map("ledger_event")
+}
+
+model LedgerAnchor {
+  id         BigInt   @id @default(autoincrement())
+  fromSeq    BigInt   @map("from_seq")
+  toSeq      BigInt   @map("to_seq")
+  merkleRoot String   @map("merkle_root") @db.Char(64)
+  sigServer  String   @map("sig_server")
+  tsaToken   Bytes    @map("tsa_token")
+  tsaName    String   @map("tsa_name")
+  s3Key      String   @map("s3_key")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@map("ledger_anchor")
 }
