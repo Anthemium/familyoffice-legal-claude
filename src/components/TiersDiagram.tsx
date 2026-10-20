@@ -53,7 +53,7 @@ export function TiersDiagram() {
             {core.map((x, i) => (
               <li
                 key={x}
-                className={`border-b border-hair py-4 font-serif text-[21px] font-medium leading-snug text-ink ${i % 2 === 1 ? "sm:border-l sm:pl-6" : "sm:pr-6"} ${i >= core.length - 2 ? "sm:border-b-0" : ""} ${i === core.length - 1 ? "border-b-0" : ""}`}
+                className={`border-b border-hair py-4 font-serif text-[19px] font-medium leading-snug text-ink ${i % 2 === 1 ? "sm:border-l sm:pl-6" : "sm:pr-6"} ${i >= core.length - 2 ? "sm:border-b-0" : ""} ${i === core.length - 1 ? "border-b-0" : ""}`}
               >
                 {x}
               </li>
