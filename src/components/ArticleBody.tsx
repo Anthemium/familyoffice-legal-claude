@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-// Минимальная разметка статей: «## », «- », «> », **жирный**, пустая строка — абзац.
+// Минимальная разметка статей: «## », «- », «> », «| таблица |», **жирный**, пустая строка — абзац.
 function inline(text: string) {
   return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
     part.startsWith("**") ? <strong key={i} className="font-semibold text-ink">{part.slice(2, -2)}</strong> : <Fragment key={i}>{part}</Fragment>
@@ -21,6 +21,36 @@ export function ArticleBody({ body }: { body: string }) {
             <blockquote key={i} className="border-l-2 border-gold py-1 pl-6 font-serif text-[22px] italic leading-snug text-ink">
               {inline(b.slice(2))}
             </blockquote>
+          );
+        }
+        if (b.startsWith("|")) {
+          const rows = b
+            .split("\n")
+            .filter((r) => !/^\|[\s|:-]+\|$/.test(r.trim())) // строка-разделитель |---|---|
+            .map((r) => r.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim()));
+          const [head, ...body] = rows;
+          return (
+            // Таблицы от четырёх колонок выходят за поля текста, чтобы не обрезаться.
+            <div key={i} className={`!my-10 -mx-4 overflow-x-auto px-4 md:mx-0 md:px-0 ${head.length >= 4 ? "lg:-mx-52 xl:-mx-64" : ""}`}>
+              <table className={`w-full border-collapse text-left text-[14px] leading-snug ${head.length >= 4 ? "min-w-[860px] lg:min-w-0" : "min-w-[560px] md:min-w-0"}`}>
+                <thead>
+                  <tr>
+                    {head.map((h, j) => (
+                      <th key={j} className="label-caps border-b border-ink/30 px-3 pb-3 align-bottom !text-[10px] text-ink-3 first:pl-0">{inline(h)}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {body.map((r, j) => (
+                    <tr key={j} className="border-b border-hair align-top">
+                      {r.map((c, k) => (
+                        <td key={k} className={`px-3 py-3 first:pl-0 ${k === 0 ? "font-medium text-ink" : ""}`}>{inline(c)}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           );
         }
         if (b.startsWith("- ")) {

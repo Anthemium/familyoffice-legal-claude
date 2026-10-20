@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { PageShell } from "@/components/PageShell";
 import { ArticleBody } from "@/components/ArticleBody";
-import { ARTICLE_SLUGS, getArticle, getArticles } from "@/content/articles";
+import { ARTICLE_SLUGS, getArticle, getArticles, getSources } from "@/content/articles";
 import { asset } from "@/lib/asset";
 
 type Params = Promise<{ locale: string; slug: string }>;
@@ -51,7 +51,20 @@ export default function ArticlePage({ params }: { params: Params }) {
         </div>
         <div className="mx-auto mt-14 max-w-[680px]">
           <ArticleBody body={article.body} />
-          <p className="mt-14 border-t border-hair pt-6 text-[12.5px] leading-relaxed text-ink-3">{t("disclaimer")}</p>
+          {getSources(slug).length > 0 && (
+            <section className="mt-14 border-t border-hair pt-6">
+              <h2 className="label-caps text-ink-3">{t("sources")}</h2>
+              <ol className="mt-4 space-y-2 text-[13px] leading-snug">
+                {getSources(slug).map((s) => (
+                  <li key={s.n} className="flex gap-3">
+                    <span className="w-7 shrink-0 font-mono text-[11px] text-ink-3">[{s.n}]</span>
+                    <a href={s.u} target="_blank" rel="noopener noreferrer" className="text-ink-2 underline decoration-hair underline-offset-4 hover:text-lapis">{s.t}</a>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+          <p className="mt-10 text-[12.5px] leading-relaxed text-ink-3">{t("disclaimer")}</p>
         </div>
         <Link href={`/journal/${next.slug}`} className="group mx-auto mt-16 block max-w-[680px] rounded-[var(--radius-card)] bg-vellum p-8 ring-1 ring-hair">
           <p className="label-caps text-ink-3">{t("next")}</p>
