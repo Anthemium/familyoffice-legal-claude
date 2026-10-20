@@ -32,6 +32,7 @@ npm run build        # статический экспорт в out/ (GitHub Pag
 - **Пороги юрисдикций** (§5–6: AMLR 25%/15%, FinIA, MAS 13O/13U, DIFC) и регуляторный календарь.
 
 ## Инфраструктура
+- **Прод:** https://familyoffice.legal — статика на общем сервере Timeweb (Caddy, SSL Let's Encrypt). Выкладка: `bash scripts/deploy.sh` (данные доступа — в `.env`, не в git).
 - GitHub → `.github/workflows/pages.yml` собирает статическое демо для показа.
 - Timeweb: `Dockerfile` (`FOL_TARGET=server`), `prisma/schema.prisma` для Managed PostgreSQL (RLS по семье, контуры A/B, неизменяемый журнал), S3 для документов (SSE-C, presigned на 5 минут), `.env.example`.
 
