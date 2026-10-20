@@ -8,7 +8,6 @@
     "principle": "Principle",
     "architecture": "Architecture",
     "practice": "Practice",
-    "models": "Models",
     "jurisdictions": "Jurisdictions",
     "platform": "Platform",
     "canon": "Design canon",
@@ -44,11 +43,11 @@
     "sfo": {
       "name": "Own single-family office",
       "points": [
-        "$6.6M+ a year in staff costs above $1B in assets",
+        "Staff costs from $6.6M a year",
         "In-house General Counsel: $274–496k a year",
         "In-house privilege is easily diluted"
       ],
-      "verdict": "Justified from $500M–$1B"
+      "verdict": "Costly and exposed to disclosure"
     },
     "ours": {
       "name": "Advocate-led family office",
@@ -57,26 +56,26 @@
         "The advocate quarterbacks every adviser of the family",
         "Secrecy protected by statute, not by contract"
       ],
-      "verdict": "Optimal for $30–500M"
+      "verdict": "One protected perimeter for the whole family"
     },
     "source": "Sources: J.P. Morgan Global Family Office Report 2026; compensation surveys 2025–2026."
   },
   "tiers": {
     "eyebrow": "II · Architecture",
     "title": "Three tiers of capital. One perimeter of privilege.",
-    "lead": "This is how leading international practices structure family offices: the advocate stands between the family and its assets and controls both flows — instructions down and reporting up.",
+    "lead": "Unlike conventional family offices, whose managers are not bound by advocate secrecy law, an advocate-led family office operates under strictly protected confidentiality: everything about you, your assets, disputes, travel and habits is covered by advocate secrecy under Article 8 of Law No. 63-FZ — so it cannot be demanded, used or disclosed at the discretion of a manager or third parties.",
     "upper": "Tier I · Family and ownership",
     "upperItems": [
       "Family council",
       "Private foundations and trusts",
       "Private trust companies"
     ],
-    "core": "Core · Advocate-led family office",
+    "core": "Core · advocate-led family office",
     "coreItems": [
-      "Outside counsel",
+      "Outside counsel to the family",
       "Dedicated consultancy",
       "Fiduciary roles",
-      "Family General Counsel"
+      "Private Legal Support for the family's way of life"
     ],
     "lower": "Tier III · Assets and transactions",
     "lowerItems": [
@@ -85,10 +84,34 @@
       "Private equity",
       "Art, yachts, aviation"
     ],
-    "ring": "Perimeter of privilege and fiduciary control",
+    "ring": "Perimeter of advocate secrecy · Art. 8, Law No. 63-FZ",
     "control": "Instructions",
     "report": "Reporting",
-    "caption": "Ambrogio Lorenzetti · Allegory of Good Government, 1338–39 · Palazzo Pubblico, Siena · Public Domain"
+    "caption": "Ambrogio Lorenzetti · Allegory of Good Government, 1338–39 · Palazzo Pubblico, Siena · Public Domain",
+    "it": {
+      "eyebrow": "Technology perimeter",
+      "title": "In-house IT development — inside advocate secrecy",
+      "lead": "The family office platform is built and operated by the firm itself. Data, documents and the activity ledger are part of the advocate's case file, not a third-party contractor's service: they are protected by the same regime as a conversation with your advocate.",
+      "items": [
+        {
+          "t": "Hashed activity ledger",
+          "d": "Every step — signing in, uploading a document, sending and opening a message — gets its own ID, time and device fingerprint and is added to a hash chain. No record can be altered unnoticed."
+        },
+        {
+          "t": "Levels of protection",
+          "d": "Two perimeters — privileged and operational. Role-based access with hardware keys, encryption of every document, download links that live five minutes, watermarks with name and time."
+        },
+        {
+          "t": "Leak prevention",
+          "d": "Privileged documents cannot be forwarded to third parties. NDAs with staff and contractors, information security audits, monitoring of personal data leaks."
+        },
+        {
+          "t": "Under advocate secrecy",
+          "d": "Information covered by advocate secrecy cannot be demanded from the advocate, and the advocate cannot be questioned about it as a witness. Searches, inspections and seizures concerning an advocate require a court order and the presence of a bar chamber representative (Art. 8, Law 63-FZ; Art. 450.1, Russian Code of Criminal Procedure)."
+        }
+      ],
+      "link": "How the activity ledger works"
+    }
   },
   "practice": {
     "eyebrow": "III · Practice",
@@ -129,63 +152,8 @@
       }
     ]
   },
-  "models": {
-    "eyebrow": "IV · Models",
-    "title": "Four models of the advocate-led family office",
-    "lead": "The model depends on the size of the family's assets, the founder's involvement and the regulatory limits of the jurisdiction.",
-    "rows": [
-      "Typical players",
-      "Status",
-      "Fiduciary roles",
-      "Privilege",
-      "Optimal wealth"
-    ],
-    "m": [
-      {
-        "name": "Outside counsel / virtual family office",
-        "v": [
-          "McDermott Will & Emery, Ropes & Gray, Dana Whiting Law",
-          "Law partnership or law firm",
-          "Limited: advising fiduciaries and PTCs",
-          "Maximum — with strict separation of law from commerce",
-          "$50–500M"
-        ]
-      },
-      {
-        "name": "Dedicated consultancy within a law firm",
-        "v": [
-          "MDR Mayfair (Mishcon de Reya group)",
-          "Separate consulting entity within a legal group",
-          "Full: trust protectors, PTC and FIC directors, foundation guardians",
-          "Indirect — via the parent firm",
-          "$100M – $1B"
-        ]
-      },
-      {
-        "name": "Trust corporation / fiduciary hybrid",
-        "v": [
-          "Withers (WITCO), Ogier, CC Malta",
-          "Licensed trust company or fiduciary wing of a firm",
-          "Full: corporate trustee, executor, MLRO / CO / DPO",
-          "Combined: privilege and fiduciary confidentiality",
-          "$100M – $2B"
-        ]
-      },
-      {
-        "name": "General Counsel heading the family's own office",
-        "v": [
-          "In-house GCs / CLOs of large single-family offices",
-          "Executive within the family structure",
-          "Internal director, company secretary, investment committee member",
-          "In-house corporate privilege — high risk of dilution",
-          "From $500M"
-        ]
-      }
-    ],
-    "note": "Based on a comparative review of international practice (2026)."
-  },
   "juris": {
-    "eyebrow": "V · Jurisdictions",
+    "eyebrow": "IV · Jurisdictions",
     "title": "Jurisdictions and the thresholds we monitor",
     "lead": "The regulatory landscape shifts every quarter. The platform tracks disclosure, licensing and tax-regime thresholds — and warns the family in advance.",
     "items": [
@@ -235,7 +203,7 @@
     "caption": "Canaletto · The Bacino di San Marco, c. 1738 · Public Domain"
   },
   "privilege": {
-    "eyebrow": "VI · Privilege hygiene",
+    "eyebrow": "V · Privilege hygiene",
     "title": "Two ambassadors — two letters",
     "lead": "The main weakness of any family office is mixed correspondence. When legal advice sits next to investment advice in one email, a court may strip protection from the whole document. The platform separates these flows by design.",
     "rules": [
@@ -259,7 +227,7 @@
     "caption": "Hans Holbein the Younger · The Ambassadors, 1533 · National Gallery, London · Public Domain"
   },
   "platform": {
-    "eyebrow": "VII · Platform",
+    "eyebrow": "VI · Platform",
     "title": "Two cabinets. Different levels of access.",
     "family": {
       "t": "Family office",

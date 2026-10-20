@@ -8,7 +8,6 @@
     "principle": "Alapelv",
     "architecture": "Felépítés",
     "practice": "Szakterületek",
-    "models": "Modellek",
     "jurisdictions": "Joghatóságok",
     "platform": "Platform",
     "canon": "Dizájnkánon",
@@ -44,11 +43,11 @@
     "sfo": {
       "name": "Saját családi iroda",
       "points": [
-        "1 milliárd dollár felett évi 6,6 millió dollár személyi költség",
+        "Személyi költség évi 6,6 millió dollártól",
         "Belső főjogász: évi 274–496 ezer dollár",
         "A belső jogász privilégiuma könnyen elvész"
       ],
-      "verdict": "500 millió – 1 milliárd dollártól indokolt"
+      "verdict": "Drága és kiszolgáltatott a közzétételnek"
     },
     "ours": {
       "name": "Ügyvédi irányítású családi iroda",
@@ -57,26 +56,26 @@
         "Az ügyvéd koordinálja a család összes tanácsadóját",
         "A titkot törvény védi, nem szerződés"
       ],
-      "verdict": "Optimális 30–500 millió dollár között"
+      "verdict": "Egyetlen védett kör az egész családnak"
     },
     "source": "Források: J.P. Morgan Global Family Office Report 2026; javadalmazási felmérések 2025–2026."
   },
   "tiers": {
     "eyebrow": "II · Felépítés",
     "title": "A vagyon három szintje. Egyetlen titoktartási kör.",
-    "lead": "Így épülnek fel a vezető nemzetközi irodák családi irodái: az ügyvéd a család és a vagyon között áll, és mindkét irányt ellenőrzi — lefelé az utasításokat, felfelé a beszámolást.",
+    "lead": "A hagyományos családi irodákkal szemben, ahol a vezetőket nem köti az ügyvédi titokról szóló törvény, az ügyvédi családi iroda szigorúan védett bizalmasság mellett működik: minden Önről, vagyonáról, jogvitáiról, utazásairól és szokásairól szóló adat a 63-FZ törvény 8. cikke szerinti ügyvédi titok védelme alatt áll — így ezeket nem lehet kikérni, felhasználni vagy a vezető vagy harmadik felek belátása szerint felfedni.",
     "upper": "I. szint · Család és tulajdon",
     "upperItems": [
       "Családi tanács",
       "Alapítványok és trösztök",
       "Magán trösztcégek"
     ],
-    "core": "Mag · Ügyvédi családi iroda",
+    "core": "Mag · ügyvédi családi iroda",
     "coreItems": [
-      "Külső jogtanácsos",
+      "A család külső jogtanácsosa",
       "Dedikált tanácsadás",
       "Bizalmi funkciók",
-      "A család főjogásza"
+      "Private Legal Support — a család életvitelének kísérése"
     ],
     "lower": "III. szint · Vagyon és ügyletek",
     "lowerItems": [
@@ -85,10 +84,34 @@
       "Magántőke-befektetések",
       "Műtárgyak, jachtok, repülők"
     ],
-    "ring": "Az ügyvédi titoktartás és a bizalmi ellenőrzés köre",
+    "ring": "Az ügyvédi titok köre · 63-FZ törvény 8. cikk",
     "control": "Utasítások",
     "report": "Beszámolás",
-    "caption": "Ambrogio Lorenzetti · A jó kormányzás allegóriája, 1338–39 · Palazzo Pubblico, Siena · Közkincs"
+    "caption": "Ambrogio Lorenzetti · A jó kormányzás allegóriája, 1338–39 · Palazzo Pubblico, Siena · Közkincs",
+    "it": {
+      "eyebrow": "Technológiai kör",
+      "title": "Saját IT-fejlesztés — az ügyvédi titkon belül",
+      "lead": "A családi iroda platformját maga a társulás fejleszti és üzemelteti. Az adatok, a dokumentumok és a műveleti napló az ügyvédi ügyirat része, nem külső vállalkozó szolgáltatása: ugyanaz a rendszer védi őket, mint az ügyvéddel folytatott beszélgetést.",
+      "items": [
+        {
+          "t": "Hash-alapú műveleti napló",
+          "d": "Minden lépés — belépés, dokumentum feltöltése, üzenet küldése és megnyitása — saját azonosítót, időt és eszköz-ujjlenyomatot kap, és hash-láncba kerül. Bejegyzést észrevétlenül módosítani lehetetlen."
+        },
+        {
+          "t": "Védelmi szintek",
+          "d": "Két kör — ügyvédi titok és operatív. Szerepkör alapú hozzáférés hardverkulccsal, minden dokumentum titkosítása, öt percig élő letöltési hivatkozások, névvel és idővel ellátott vízjel."
+        },
+        {
+          "t": "Szivárgás elleni védelem",
+          "d": "A titkos kör dokumentumai nem továbbíthatók harmadik félnek. Titoktartási szerződések a munkatársakkal és alvállalkozókkal, informatikai biztonsági audit, személyes adatok szivárgásának figyelése."
+        },
+        {
+          "t": "Ügyvédi titok alatt",
+          "d": "Az ügyvédi titkot képező adatokat nem lehet kikérni az ügyvédtől, és az ügyvéd tanúként sem hallgatható meg róluk. Az ügyvédet érintő házkutatás, szemle és lefoglalás csak bírósági határozattal és az ügyvédi kamara képviselőjének jelenlétében lehetséges (63-FZ törvény 8. cikk, orosz büntetőeljárási törvénykönyv 450.1. cikk)."
+        }
+      ],
+      "link": "Hogyan működik a műveleti napló"
+    }
   },
   "practice": {
     "eyebrow": "III · Szakterületek",
@@ -129,63 +152,8 @@
       }
     ]
   },
-  "models": {
-    "eyebrow": "IV · Modellek",
-    "title": "Az ügyvédi irányítású családi iroda négy modellje",
-    "lead": "A modellt a család vagyonának nagysága, az alapító bevonódása és a joghatóság szabályozási korlátai határozzák meg.",
-    "rows": [
-      "Jellemző szereplők",
-      "Jogállás",
-      "Bizalmi szerepek",
-      "Ügyvédi titok",
-      "Optimális vagyon"
-    ],
-    "m": [
-      {
-        "name": "Külső jogtanácsos / virtuális családi iroda",
-        "v": [
-          "McDermott Will & Emery, Ropes & Gray, Dana Whiting Law",
-          "Ügyvédi társulás, ügyvédi iroda",
-          "Korlátozott: bizalmi vagyonkezelők és PTC-k tanácsadása",
-          "A legerősebb — a jog és az üzlet szigorú elválasztásával",
-          "50–500 M $"
-        ]
-      },
-      {
-        "name": "Dedikált tanácsadó társaság az ügyvédi irodánál",
-        "v": [
-          "MDR Mayfair (Mishcon de Reya csoport)",
-          "Önálló tanácsadó jogi személy az ügyvédi csoporton belül",
-          "Teljes: tröszt-protektorok, PTC- és FIC-igazgatók, alapítványi kurátorok",
-          "Közvetett — az anyairoda bevonásával",
-          "100 M – 1 Mrd $"
-        ]
-      },
-      {
-        "name": "Trösztcég / bizalmi hibrid",
-        "v": [
-          "Withers (WITCO), Ogier, CC Malta",
-          "Engedéllyel rendelkező trösztcég vagy az iroda bizalmi szárnya",
-          "Teljes: társasági vagyonkezelő, végrendeleti végrehajtó, MLRO / CO / DPO",
-          "Kombinált: titok és bizalmi diszkréció",
-          "100 M – 2 Mrd $"
-        ]
-      },
-      {
-        "name": "Főjogász a saját iroda élén",
-        "v": [
-          "Nagy egycsaládos irodák belső GC-i / CLO-i",
-          "Felsővezető a családi struktúrán belül",
-          "Belső igazgató, társasági titkár, befektetési bizottsági tag",
-          "Belső jogászi privilégium — nagy a felhígulás kockázata",
-          "500 M $-tól"
-        ]
-      }
-    ],
-    "note": "A nemzetközi gyakorlat összehasonlító áttekintése (2026) alapján."
-  },
   "juris": {
-    "eyebrow": "V · Joghatóságok",
+    "eyebrow": "IV · Joghatóságok",
     "title": "Joghatóságok és az általunk figyelt küszöbértékek",
     "lead": "A szabályozási környezet negyedévente változik. A platform figyeli a közzétételi, engedélyezési és adózási küszöböket — és előre figyelmezteti a családot.",
     "items": [
@@ -235,7 +203,7 @@
     "caption": "Canaletto · A San Marco-medence, kb. 1738 · Közkincs"
   },
   "privilege": {
-    "eyebrow": "VI · Titokhigiénia",
+    "eyebrow": "V · Titokhigiénia",
     "title": "Két követ — két levél",
     "lead": "Minden családi iroda legnagyobb gyengesége a vegyes levelezés. Ha egy e-mailben jogi tanács és befektetési tanács keveredik, a bíróság az egész dokumentumtól megtagadhatja a védelmet. A platform ezeket az áramlásokat technikailag elválasztja.",
     "rules": [
@@ -259,7 +227,7 @@
     "caption": "Ifj. Hans Holbein · A követek, 1533 · National Gallery, London · Közkincs"
   },
   "platform": {
-    "eyebrow": "VII · Platform",
+    "eyebrow": "VI · Platform",
     "title": "Két dolgozószoba. Eltérő hozzáférési szintek.",
     "family": {
       "t": "Családi felület",

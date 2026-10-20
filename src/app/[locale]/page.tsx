@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import { ArrowRight, ArrowUpRight, Lock, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Lock, Phone, Mail, MapPin, Fingerprint } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/PageShell";
 import { Art } from "@/components/Art";
@@ -30,8 +30,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
   const juris = t.raw("juris.items") as { code: string; name: string; regime: string; figure: string; figureLabel: string }[];
   const rules = t.raw("privilege.rules") as { t: string; d: string }[];
   const stats = t.raw("stats.items") as { v: string; l: string }[];
-  const models = t.raw("models.m") as { name: string; v: string[] }[];
-  const modelRows = t.raw("models.rows") as string[];
+  const itItems = t.raw("tiers.it.items") as { t: string; d: string }[];
   const articles = getArticles(locale);
 
   return (
@@ -131,6 +130,33 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
           <TiersDiagram />
         </section>
 
+        {/* ── Технологический контур: собственная IT-разработка под адвокатской тайной ── */}
+        <section className="mx-auto max-w-[1320px] px-4 pb-20 md:px-8 md:pb-28">
+          <div className="relative overflow-hidden rounded-[var(--radius-card)] bg-ink p-7 text-carta md:p-12">
+            <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+              <div>
+                <p className="label-caps flex items-center gap-2 text-gold"><Fingerprint size={14} /> {t("tiers.it.eyebrow")}</p>
+                <h3 className="mt-4 font-serif text-[32px] leading-[1.08] md:text-[44px]">{t("tiers.it.title")}</h3>
+                <p className="mt-5 text-[15.5px] leading-relaxed text-carta/65">{t("tiers.it.lead")}</p>
+                <Link href="/ledger" className="mt-8 inline-flex items-center gap-2 text-[14px] font-medium text-gold">
+                  {t("tiers.it.link")} <ArrowUpRight size={16} />
+                </Link>
+              </div>
+              <dl className="grid border-t border-white/12 sm:grid-cols-2">
+                {itItems.map((it, i) => (
+                  <div key={it.t} className={`border-b border-white/12 py-6 ${i % 2 === 1 ? "sm:border-l sm:pl-7" : "sm:pr-7"}`}>
+                    <dt className={`flex items-baseline gap-3 font-serif text-[22px] leading-tight ${i === 3 ? "text-[#e9b9c0]" : ""}`}>
+                      <span className="font-mono text-[11px] text-gold">0{i + 1}</span>
+                      {it.t}
+                    </dt>
+                    <dd className="mt-2.5 text-[13.5px] leading-relaxed text-carta/60">{it.d}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </section>
+
         {/* ── III · ПРАКТИКА ───────────────────────────────── */}
         <section id="practice" className="bg-ink text-carta">
           <div className="mx-auto max-w-[1320px] px-4 py-20 md:px-8 md:py-28">
@@ -147,30 +173,6 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
               ))}
             </ol>
           </div>
-        </section>
-
-        {/* ── IV · МОДЕЛИ ──────────────────────────────────── */}
-        <section id="models" className="mx-auto max-w-[1320px] px-4 py-20 md:px-8 md:py-28">
-          <SectionHead eyebrow={t("models.eyebrow")} title={t("models.title")} lead={t("models.lead")} />
-          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {models.map((m, i) => (
-              <article key={m.name} className={`flex flex-col rounded-[var(--radius-card)] p-7 ${i === 0 ? "bg-lapis text-carta" : "bg-vellum ring-1 ring-hair"}`}>
-                <p className={`font-serif text-[22px] italic ${i === 0 ? "text-gold" : "text-gold"}`}>{ROMAN[i]}</p>
-                <h3 className="mt-2 min-h-[3.3em] font-serif text-[25px] leading-[1.1]">{m.name}</h3>
-                <dl className="mt-5 flex-1">
-                  {modelRows.map((row, r) => (
-                    <div key={row} className={`border-t py-3 ${i === 0 ? "border-white/15" : "border-hair"}`}>
-                      <dt className={`label-caps !text-[9.5px] ${i === 0 ? "text-carta/55" : "text-ink-3"}`}>{row}</dt>
-                      <dd className={`mt-1 leading-snug ${r === modelRows.length - 1 ? "text-[19px] font-semibold" : "text-[13.5px]"} ${i === 0 ? "text-carta/90" : "text-ink-2"} ${r === modelRows.length - 1 && i !== 0 ? "!text-lapis" : ""}`}>
-                        {m.v[r]}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </article>
-            ))}
-          </div>
-          <p className="mt-6 font-mono text-[11px] text-ink-3">{t("models.note")}</p>
         </section>
 
         {/* ── V · ЮРИСДИКЦИИ ───────────────────────────────── */}
@@ -261,7 +263,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
         <section id="journal" className="border-t border-hair">
           <div className="mx-auto max-w-[1320px] px-4 py-20 md:px-8 md:py-28">
             <div className="flex flex-wrap items-end justify-between gap-6">
-              <SectionHead eyebrow={`VIII · ${t("journal.eyebrow")}`} title={t("journal.homeTitle")} />
+              <SectionHead eyebrow={`VII · ${t("journal.eyebrow")}`} title={t("journal.homeTitle")} />
               <Link href="/journal" className="inline-flex items-center gap-2 text-[14px] font-medium text-lapis">
                 {t("journal.homeCta")} <ArrowUpRight size={16} />
               </Link>

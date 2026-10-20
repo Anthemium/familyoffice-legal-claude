@@ -10,7 +10,7 @@ import { LangSwitch } from "./LangSwitch";
 // Якоря главной; «Аналитика» — отдельный раздел. Ссылки через Link, чтобы работали и со страниц статей.
 const items = [
   { key: "principle", href: "/#principle" },
-  { key: "models", href: "/#models" },
+  { key: "architecture", href: "/#architecture" },
   { key: "practice", href: "/#practice" },
   { key: "jurisdictions", href: "/#jurisdictions" },
   { key: "platform", href: "/#platform" },
