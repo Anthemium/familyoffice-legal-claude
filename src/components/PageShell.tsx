@@ -15,7 +15,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
       <main>{children}</main>
       <footer className="border-t border-hair">
         <div className="mx-auto grid max-w-[1320px] gap-10 px-4 py-12 md:grid-cols-[1fr_auto] md:px-8">
-          <div>
+          <div className="flex flex-col items-start">
             <Wordmark sub={t("nav.by")} />
             <a
               href="https://markovgroup.legal"
